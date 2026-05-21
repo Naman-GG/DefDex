@@ -1,75 +1,47 @@
 {
   "air_assets": {
-    "Rafale_DH_EH": {
-      "country": "India",
-      "generation": 4.5,
-      "stealth_rcs_m2": 0.5,
-      "bvr_missile_range_km": 150,
-      "payload_capacity_kg": 9500,
-      "high_altitude_penalty_index": 0.15
-    },
-    "Su_30MKI": {
-      "country": "India",
-      "generation": 4.0,
-      "stealth_rcs_m2": 4.0,
-      "bvr_missile_range_km": 110,
-      "payload_capacity_kg": 8000,
-      "high_altitude_penalty_index": 0.20
-    },
-    "J_20_A": {
-      "country": "China",
-      "generation": 5.0,
-      "stealth_rcs_m2": 0.01,
-      "bvr_missile_range_km": 200,
-      "payload_capacity_kg": 11000,
-      "high_altitude_penalty_index": 0.30
-    },
-    "J_16": {
-      "country": "China",
-      "generation": 4.5,
-      "stealth_rcs_m2": 2.0,
-      "bvr_missile_range_km": 145,
-      "payload_capacity_kg": 12000,
-      "high_altitude_penalty_index": 0.22
-    },
-    "JF_17_Block_III": {
-      "country": "Pakistan",
-      "generation": 4.5,
-      "stealth_rcs_m2": 1.5,
-      "bvr_missile_range_km": 140,
-      "payload_capacity_kg": 3800,
-      "high_altitude_penalty_index": 0.20
-    },
-    "F_16_Block_52": {
-      "country": "Pakistan",
-      "generation": 4.0,
-      "stealth_rcs_m2": 2.5,
-      "bvr_missile_range_km": 120,
-      "payload_capacity_kg": 7700,
-      "high_altitude_penalty_index": 0.18
-    }
+    "Rafale_DH_EH": { "country": "India", "generation": 4.5, "stealth_rcs_m2": 0.5, "bvr_missile_range_km": 150, "payload_capacity_kg": 9500, "high_altitude_penalty_index": 0.15 },
+    "Su_30MKI": { "country": "India", "generation": 4.0, "stealth_rcs_m2": 4.0, "bvr_missile_range_km": 110, "payload_capacity_kg": 8000, "high_altitude_penalty_index": 0.20 },
+    "Tejas_Mk1A": { "country": "India", "generation": 4.0, "stealth_rcs_m2": 1.5, "bvr_missile_range_km": 100, "payload_capacity_kg": 3500, "high_altitude_penalty_index": 0.12 },
+    
+    "J_20_A": { "country": "China", "generation": 5.0, "stealth_rcs_m2": 0.01, "bvr_missile_range_km": 200, "payload_capacity_kg": 11000, "high_altitude_penalty_index": 0.30 },
+    "J_16": { "country": "China", "generation": 4.5, "stealth_rcs_m2": 2.0, "bvr_missile_range_km": 145, "payload_capacity_kg": 12000, "high_altitude_penalty_index": 0.22 },
+    
+    "JF_17_Block_III": { "country": "Pakistan", "generation": 4.5, "stealth_rcs_m2": 1.5, "bvr_missile_range_km": 140, "payload_capacity_kg": 3800, "high_altitude_penalty_index": 0.20 },
+    "F_16_Block_52": { "country": "Pakistan", "generation": 4.0, "stealth_rcs_m2": 2.5, "bvr_missile_range_km": 120, "payload_capacity_kg": 7700, "high_altitude_penalty_index": 0.18 },
+    "J_10CE": { "country": "Pakistan", "generation": 4.5, "stealth_rcs_m2": 1.0, "bvr_missile_range_km": 145, "payload_capacity_kg": 5600, "high_altitude_penalty_index": 0.16 },
+
+    "Mig_29BM": { "country": "Bangladesh", "generation": 4.0, "stealth_rcs_m2": 5.0, "bvr_missile_range_km": 80, "payload_capacity_kg": 4000, "high_altitude_penalty_index": 0.15 },
+    "F_7BG": { "country": "Bangladesh", "generation": 3.0, "stealth_rcs_m2": 3.0, "bvr_missile_range_km": 20, "payload_capacity_kg": 2000, "high_altitude_penalty_index": 0.10 },
+
+    "Mi_35_Hind": { "country": "Afghanistan", "generation": 3.0, "stealth_rcs_m2": 15.0, "bvr_missile_range_km": 0, "payload_capacity_kg": 2400, "high_altitude_penalty_index": 0.25 }
   },
   "land_assets": {
-    "T_90_Bhishma": {
-      "country": "India",
-      "type": "MBT",
-      "armor_rating": 85,
-      "firepower_rating": 90,
-      "mountain_mobility_index": 0.4
-    },
-    "Type_99A": {
-      "country": "China",
-      "type": "MBT",
-      "armor_rating": 95,
-      "firepower_rating": 95,
-      "mountain_mobility_index": 0.3
-    },
-    "Al_Khalid_I": {
-      "country": "Pakistan",
-      "type": "MBT",
-      "armor_rating": 75,
-      "firepower_rating": 80,
-      "mountain_mobility_index": 0.5
-    }
+    "T_90_Bhishma": { "country": "India", "type": "MBT", "armor_rating": 85, "firepower_rating": 90, "mountain_mobility_index": 0.4 },
+    "T_72_Ajeya": { "country": "India", "type": "MBT", "armor_rating": 70, "firepower_rating": 75, "mountain_mobility_index": 0.45 },
+    
+    "Type_99A": { "country": "China", "type": "MBT", "armor_rating": 95, "firepower_rating": 95, "mountain_mobility_index": 0.3 },
+    "Type_15_Light_Tank": { "country": "China", "type": "Light_Tank", "armor_rating": 55, "firepower_rating": 80, "mountain_mobility_index": 0.95 },
+    
+    "VT_4": { "country": "Pakistan", "type": "MBT", "armor_rating": 88, "firepower_rating": 90, "mountain_mobility_index": 0.4 },
+    "Al_Khalid_I": { "country": "Pakistan", "type": "MBT", "armor_rating": 75, "firepower_rating": 80, "mountain_mobility_index": 0.5 },
+
+    "Type_59_Durjoy": { "country": "Bangladesh", "type": "MBT", "armor_rating": 60, "firepower_rating": 65, "mountain_mobility_index": 0.30 },
+
+    "M113_APC": { "country": "Afghanistan", "type": "APC", "armor_rating": 30, "firepower_rating": 25, "mountain_mobility_index": 0.60 }
+  },
+  "air_defense_assets": {
+    "S_400_Triumf": { "country": "India", "max_intercept_range_km": 400, "tracking_channels": 80, "radar_detection_range_km": 600 },
+    "Akash_NG": { "country": "India", "max_intercept_range_km": 30, "tracking_channels": 4, "radar_detection_range_km": 80 },
+    "HQ_9_PLA": { "country": "China", "max_intercept_range_km": 250, "tracking_channels": 32, "radar_detection_range_km": 400 },
+    "HQ_9_P": { "country": "Pakistan", "max_intercept_range_km": 125, "tracking_channels": 16, "radar_detection_range_km": 300 },
+    "FM_90_S": { "country": "Bangladesh", "max_intercept_range_km": 15, "tracking_channels": 2, "radar_detection_range_km": 25 },
+    "ZU_23_2": { "country": "Afghanistan", "max_intercept_range_km": 2.5, "tracking_channels": 1, "radar_detection_range_km": 0 }
+  },
+  "strategic_missiles": {
+    "BrahMos_1": { "country": "India", "type": "Supersonic_Cruise", "range_km": 290, "max_speed_mach": 2.8 },
+    "DF_21D": { "country": "China", "type": "Anti_Ship_Ballistic", "range_km": 1500, "max_speed_mach": 7.5 },
+    "Fatah_II": { "country": "Pakistan", "type": "Guided_MLRS", "range_km": 400, "max_speed_mach": 4.0 },
+    "Qader_Marine": { "country": "Bangladesh", "type": "Anti_Ship_Cruise", "range_km": 200, "max_speed_mach": 0.9 }
   }
 }
