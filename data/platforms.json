@@ -1,0 +1,75 @@
+{
+  "air_assets": {
+    "Rafale_DH_EH": {
+      "country": "India",
+      "generation": 4.5,
+      "stealth_rcs_m2": 0.5,
+      "bvr_missile_range_km": 150,
+      "payload_capacity_kg": 9500,
+      "high_altitude_penalty_index": 0.15
+    },
+    "Su_30MKI": {
+      "country": "India",
+      "generation": 4.0,
+      "stealth_rcs_m2": 4.0,
+      "bvr_missile_range_km": 110,
+      "payload_capacity_kg": 8000,
+      "high_altitude_penalty_index": 0.20
+    },
+    "J_20_A": {
+      "country": "China",
+      "generation": 5.0,
+      "stealth_rcs_m2": 0.01,
+      "bvr_missile_range_km": 200,
+      "payload_capacity_kg": 11000,
+      "high_altitude_penalty_index": 0.30
+    },
+    "J_16": {
+      "country": "China",
+      "generation": 4.5,
+      "stealth_rcs_m2": 2.0,
+      "bvr_missile_range_km": 145,
+      "payload_capacity_kg": 12000,
+      "high_altitude_penalty_index": 0.22
+    },
+    "JF_17_Block_III": {
+      "country": "Pakistan",
+      "generation": 4.5,
+      "stealth_rcs_m2": 1.5,
+      "bvr_missile_range_km": 140,
+      "payload_capacity_kg": 3800,
+      "high_altitude_penalty_index": 0.20
+    },
+    "F_16_Block_52": {
+      "country": "Pakistan",
+      "generation": 4.0,
+      "stealth_rcs_m2": 2.5,
+      "bvr_missile_range_km": 120,
+      "payload_capacity_kg": 7700,
+      "high_altitude_penalty_index": 0.18
+    }
+  },
+  "land_assets": {
+    "T_90_Bhishma": {
+      "country": "India",
+      "type": "MBT",
+      "armor_rating": 85,
+      "firepower_rating": 90,
+      "mountain_mobility_index": 0.4
+    },
+    "Type_99A": {
+      "country": "China",
+      "type": "MBT",
+      "armor_rating": 95,
+      "firepower_rating": 95,
+      "mountain_mobility_index": 0.3
+    },
+    "Al_Khalid_I": {
+      "country": "Pakistan",
+      "type": "MBT",
+      "armor_rating": 75,
+      "firepower_rating": 80,
+      "mountain_mobility_index": 0.5
+    }
+  }
+}

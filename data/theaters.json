@@ -1,0 +1,23 @@
+{
+  "Ladakh_Tibet": {
+    "terrain_type": "High_Altitude_Mountain",
+    "average_altitude_meters": 4200,
+    "logistical_friction_index": 0.85,
+    "electronic_jamming_baseline": 0.40,
+    "allowed_asset_types": ["air", "infantry", "light_artillery", "limited_mbt"]
+  },
+  "Punjab_Plains": {
+    "terrain_type": "Plains_Mechanized",
+    "average_altitude_meters": 250,
+    "logistical_friction_index": 0.15,
+    "electronic_jamming_baseline": 0.10,
+    "allowed_asset_types": ["air", "mbt", "infantry", "heavy_artillery"]
+  },
+  "Thar_Desert": {
+    "terrain_type": "Desert",
+    "average_altitude_meters": 150,
+    "logistical_friction_index": 0.45,
+    "electronic_jamming_baseline": 0.15,
+    "allowed_asset_types": ["air", "mbt", "infantry"]
+  }
+}

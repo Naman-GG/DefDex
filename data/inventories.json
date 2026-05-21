@@ -1,0 +1,29 @@
+{
+  "India": {
+    "air_assets": {
+      "Rafale_DH_EH": 36,
+      "Su_30MKI": 260
+    },
+    "land_assets": {
+      "T_90_Bhishma": 1200
+    }
+  },
+  "China": {
+    "air_assets": {
+      "J_20_A": 150,
+      "J_16": 250
+    },
+    "land_assets": {
+      "Type_99A": 1200
+    }
+  },
+  "Pakistan": {
+    "air_assets": {
+      "JF_17_Block_III": 50,
+      "F_16_Block_52": 45
+    },
+    "land_assets": {
+      "Al_Khalid_I": 600
+    }
+  }
+}
