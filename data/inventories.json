@@ -1,29 +1,32 @@
 {
   "India": {
-    "air_assets": {
-      "Rafale_DH_EH": 36,
-      "Su_30MKI": 260
-    },
-    "land_assets": {
-      "T_90_Bhishma": 1200
-    }
+    "air_assets": { "Rafale_DH_EH": 36, "Su_30MKI": 260, "Tejas_Mk1A": 40 },
+    "land_assets": { "T_90_Bhishma": 1200, "T_72_Ajeya": 2400 },
+    "air_defense_assets": { "S_400_Triumf": 5, "Akash_NG": 80 },
+    "strategic_missiles": { "BrahMos_1": 500 }
   },
   "China": {
-    "air_assets": {
-      "J_20_A": 150,
-      "J_16": 250
-    },
-    "land_assets": {
-      "Type_99A": 1200
-    }
+    "air_assets": { "J_20_A": 150, "J_16": 250 },
+    "land_assets": { "Type_99A": 1200, "Type_15_Light_Tank": 500 },
+    "air_defense_assets": { "HQ_9_PLA": 64 },
+    "strategic_missiles": { "DF_21D": 200 }
   },
   "Pakistan": {
-    "air_assets": {
-      "JF_17_Block_III": 50,
-      "F_16_Block_52": 45
-    },
-    "land_assets": {
-      "Al_Khalid_I": 600
-    }
+    "air_assets": { "JF_17_Block_III": 50, "F_16_Block_52": 45, "J_10CE": 36 },
+    "land_assets": { "VT_4": 300, "Al_Khalid_I": 600 },
+    "air_defense_assets": { "HQ_9_P": 8 },
+    "strategic_missiles": { "Fatah_II": 40 }
+  },
+  "Bangladesh": {
+    "air_assets": { "Mig_29BM": 8, "F_7BG": 36 },
+    "land_assets": { "Type_59_Durjoy": 174 },
+    "air_defense_assets": { "FM_90_S": 12 },
+    "strategic_missiles": { "Qader_Marine": 30 }
+  },
+  "Afghanistan": {
+    "air_assets": { "Mi_35_Hind": 4 },
+    "land_assets": { "M113_APC": 250 },
+    "air_defense_assets": { "ZU_23_2": 100 },
+    "strategic_missiles": {}
   }
 }
