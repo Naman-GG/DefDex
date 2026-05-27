@@ -1,0 +1,85 @@
+Recipient,Supplier,Designation,Description,Weapon Category,Order Year,Number Ordered,Delivery years
+India,Russia,R-73,short-range air-to-air missile,Missiles,2019,300,2022
+India,United Kingdom,M-777 155mm,towed gun,Artillery,2016,145,2022
+India,France,Rafale,fighter/ground-attack aircraft,Aircraft,2017,36,2022
+India,United States,P-8A Poseidon,anti-submarine aircraft,Aircraft,2016,4,2022
+India,United States,Excalibur,guided shell,Missiles,2021,100,2023
+India,United States,Excalibur,guided shell,Missiles,2019,1200,2020
+India,Russia,MiG-29SMT,fighter/ground-attack aircraft,Aircraft,2010,29,2016
+India,United Kingdom,ASRAAM,long-range air-to-air missile,Missiles,2014,384,2024
+India,Italy,RAN-40,air-search radar,Sensors,2011,1,2022
+India,United States,AH-64E Apache,combat helicopter,Aircraft,2015,22,2020
+India,Israel,SPICE,guided glide bomb,Missiles,2020,100,2023
+India,Russia,9M119 Refleks,anti-tank missile,Missiles,2013,25000,2024
+India,Russia,Konkurs,anti-tank missile,Missiles,2019,4331,2022
+India,France,AASM Hammer,air-to-surface missile,Missiles,2020,200,2022
+India,Russia,BMP-2,infantry fighting vehicle,Armoured vehicles,2020,156,2023
+India,United States,Harpoon Block-2,anti-ship/land-attack missile,Missiles,2020,10,2022
+India,Israel,Spike-MR,anti-tank missile,Missiles,2019,260,2020
+India,United States,AGM-114L Hellfire,anti-tank missile,Missiles,2015,812,2020
+India,unknown supplier(s),vehicle engine 401-600,vehicle engine,Engines,2021,126,2024
+India,South Africa,Mbombe-4 -,armoured personnel carrier,Armoured vehicles,2021,126,2024
+India,Germany,Do-228MP -,maritime patrol aircraft,Aircraft,2012,14,2016
+India,unknown supplier(s),vehicle engine 401-600,vehicle engine,Engines,2019,6,2022
+India,United States,C-130J Hercules,transport aircraft,Aircraft,2018,1,2019
+India,South Korea,K-9 Thunder 155mm -,self-propelled gun,Artillery,2017,100,2021
+India,United States,Harpoon Block-2,anti-ship/land-attack missile,Missiles,2016,12,2018
+India,United States,Mk-54 LWT,anti-submarine torpedo,Missiles,2019,30,2024
+India,Russia,AK-630 30mm,naval gun,Naval weapons,2010,4,2022
+India,Israel,SPICE,guided glide bomb,Missiles,2019,100,2019
+India,United States,CBU-97,guided bomb,Missiles,2010,512,2017
+India,Israel,M-20600,ground surveillance radar,Sensors,2016,10,2019
+India,Russia,Mi-17,transport helicopter,Aircraft,2013,68,2016
+India,Russia,KAB-500,guided bomb,Missiles,2011,100,2014
+India,Canada,Global Express -,transport aircraft,Aircraft,2011,2,2015
+India,Israel,NG-LGB,guided bomb,Missiles,2012,500,2015
+India,Germany,BR-710 (7600),turbofan,Engines,2011,4,2015
+India,United States,AGM-114 Hellfire-2,anti-tank/air-to-surface missile,Missiles,2015,542,2020
+India,United States,APG-78 Longbow,combat helicopter radar,Sensors,2016,12,2020
+India,United States,aircraft engine 2001-3000,aircraft engine,Engines,2015,6,2020
+India,Israel,Searcher,reconnaissance drone,Aircraft,2010,2,2011
+India,Switzerland,PC-7 -,(armed) trainer aircraft,Aircraft,2012,75,2015
+India,Israel,M-2221,fire-control radar,Sensors,2010,4,2020
+India,Israel,Heron-MP,maritime patrol drone,Aircraft,2010,2,2011
+India,Canada,aircraft engine 500-1000,aircraft engine,Engines,2012,75,2015
+India,Israel,Heron UAV,reconnaissance drone,Aircraft,2015,15,2017
+India,Poland,WZT-3M,armoured recovery vehicle,Armoured vehicles,2012,8,2013
+India,Russia,R-77,long-range air-to-air missile,Missiles,2011,500,2013
+India,United Kingdom,Hawk-100,trainer/combat aircraft,Aircraft,2010,57,2016
+India,Russia,BMP-2,infantry fighting vehicle,Armoured vehicles,2018,149,2021
+India,France,MICA,long-range air-to-air missile,Missiles,2012,493,2021
+India,Russia,Su-30MK,fighter/ground-attack aircraft,Aircraft,2012,42,2017
+India,Israel,M-2248,multi-function radar,Sensors,2015,1,2022
+India,France,AASM Hammer,air-to-surface missile,Missiles,2021,100,2024
+India,United States,Mk-54 LWT,anti-submarine torpedo,Missiles,2011,32,2016
+India,France,SA-315,light helicopter,Aircraft,2013,20,2016
+India,United States,Stinger,portable surface-to-air missile,Missiles,2013,245,2020
+India,United States,C-17,heavy transport aircraft,Aircraft,2017,1,2019
+India,Israel,MARS2,reconnaissance/signals intelligence system,Sensors,2011,2,2015
+India,Russia,Kokon,anti-tank missile,Missiles,2019,500,2019
+India,France,SA-316 Alouette-3,light helicopter,Aircraft,2017,8,2020
+India,United States,AGM-114 Hellfire-2,anti-tank/air-to-surface missile,Missiles,2020,10,2022
+India,Russia,R-77,long-range air-to-air missile,Missiles,2019,400,2022
+India,Russia,R-27R/T,long-range air-to-air missile,Missiles,2019,300,2022
+India,United States,Harpoon Block-2,anti-ship/land-attack missile,Missiles,2012,21,2014
+India,Germany,vehicle engine 801-1100,vehicle engine,Engines,2017,100,2021
+India,Israel,Spike-MR,anti-tank missile,Missiles,2020,250,2023
+India,France,MICA,long-range air-to-air missile,Missiles,2017,350,2023
+India,Ukraine,R-27R/T,long-range air-to-air missile,Missiles,2012,360,2013
+India,Kyrgyzstan,SET-65,anti-submarine/ship torpedo,Missiles,2011,14,2017
+India,United States,CH-47F,transport helicopter,Aircraft,2015,15,2020
+India,United States,C-130J Hercules,transport aircraft,Aircraft,2013,6,2017
+India,Germany,Do-228,light transport aircraft,Aircraft,2015,14,2020
+India,United States,MQ-9 UAV,reconnaissance drone,Aircraft,2020,2,2020
+India,United Kingdom,Meteor MI,long-range air-to-air missile,Missiles,2017,200,2022
+India,Russia,Igla-S,portable surface-to-air missile,Missiles,2020,216,2021
+India,Russia,Kh-35,anti-ship missile,Missiles,2011,50,2012
+India,Poland,Warmate,one-way attack drone,Missiles,2020,100,2022
+India,Russia,T-90S,tank,Armoured vehicles,2013,236,2022
+India,Israel,Barak-1,surface-to-air missile,Missiles,2018,131,2022
+India,Russia,Konkurs,anti-tank missile,Missiles,2012,10000,2017
+India,Israel,Heron-2,reconnaissance drone,Aircraft,2022,4,2023
+India,United States,C-17,heavy transport aircraft,Aircraft,2011,10,2014
+India,France,Storm Shadow,air-to-surface missile,Missiles,2017,200,2022
+India,Israel,Popeye,air-to-surface missile,Missiles,2010,30,2014
+India,United States,Harpoon Block-2,anti-ship/land-attack missile,Missiles,2010,20,2013
