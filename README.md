@@ -5,7 +5,7 @@
 
 ---
 
-## Project Status — Stage 4 of 10 ✅
+## Project Status — Stage 5 of 10 ✅
 
 | Phase | Status |
 |---|---|
@@ -13,6 +13,7 @@
 | Data collection (SIPRI, GFP, UCDP, World Bank) | ✅ Complete |
 | Exploratory Data Analysis | ✅ Complete |
 | Feature Engineering — 6 domain vectors | ✅ Complete |
+| Training set — 50-country universe (X, y) | ✅ Complete |
 | ML Models (XGBoost, LogReg, MLP) | 🔄 Up next |
 | Gap Analyzer & Recommendations Engine | ⏳ Pending |
 | Streamlit Dashboard | ⏳ Pending |
@@ -72,29 +73,30 @@ The pipeline outputs a **win-probability score** with SHAP-based explainability 
 DefDex/
 ├── data/
 │   ├── raw/                        # All original datasets (never modified)
-│   │   ├── sipri_milex.xlsx
-│   │   ├── sipri_milex_constant_usd.csv
+│   │   ├── gfp_all_countries.csv   # 50 countries x 21 GFP metrics (Stage 5)
+│   │   ├── worldbank_all_countries.csv # 50 countries x 9 WB indicators (Stage 5)
+│   │   ├── ucdp_armed_conflict.csv # global conflict history
+│   │   ├── sipri_milex_constant_usd.csv  # SIPRI (3-country EDA-era files)
 │   │   ├── sipri_milex_gdp_share.csv
 │   │   ├── sipri_tiv_india_imports.csv
 │   │   ├── sipri_tiv_pak_imports.csv
-│   │   ├── india_arms_transactions_manual.csv
-│   │   ├── pak_arms_transactions_manual.csv
-│   │   ├── gfp_raw.csv
-│   │   ├── ucdp_armed_conflict.csv
+│   │   ├── gfp_raw.csv             # original 3-country snapshot
 │   │   └── worldbank_indicators.csv
-│   └── processed/                  # ML-ready feature vectors (Stage 4)
-│       ├── features.csv            # 3 countries x 42 features, 6 domains
+│   └── processed/                  # ML-ready feature matrix (Stage 5)
+│       ├── features.csv            # 50 countries x 45 features + target, 6 domains
 │       └── feature_dictionary.csv  # feature/domain/source/description map
 ├── notebooks/
 │   ├── 01_eda.ipynb                # Exploratory data analysis
 │   ├── defense_spend_trend.png     # China vs India vs Pakistan absolute spend
 │   └── defense_gdp_share.png      # Defense spend as % of GDP
 ├── src/
-│   ├── data_fetcher.py             # World Bank API integration
-│   └── scrapers.py                 # GFP data utilities
+│   ├── data_fetcher.py             # World Bank API (original 3-country)
+│   ├── fetch_worldbank.py          # World Bank API — 50-country universe
+│   └── scrapers.py                 # GFP scraper prototype
 ├── model/                          # Trained models (Stage 6+)
 ├── pipeline/
-│   └── build_features.py           # Raw data → 6-domain feature vectors
+│   ├── collect_gfp.py              # Scrapes GFP listing pages → 50 countries
+│   └── build_features.py           # Raw data → 6-domain feature matrix + target
 ├── dashboard/                      # Streamlit app (Stage 9+)
 ├── requirements.txt
 └── README.md
@@ -108,9 +110,9 @@ DefDex/
 Stage 1  ✅  Environment setup, folder scaffold, GitHub repo
 Stage 2  ✅  SIPRI, GFP, arms transfer data collected
 Stage 3  ✅  UCDP + World Bank data, EDA notebook, visualizations
-Stage 4  ✅  Feature engineering — 42 features across 6 domain vectors
-Stage 5       Enrich features, build training set (X, y)
-Stage 6       XGBoost capability scorer + SHAP explainability
+Stage 4  ✅  Feature engineering — 6 domain vectors
+Stage 5  ✅  Expanded to top-50 countries; training set (X, y) with GFP power index as target
+Stage 6  🔄  XGBoost capability scorer + SHAP explainability
 Stage 7       War outcome predictor (LogReg + MLP ensemble)
 Stage 8       Gap analyzer — KMeans + recommendations engine
 Stage 9       Streamlit dashboard — radar chart + win probability
