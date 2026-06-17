@@ -5,15 +5,15 @@
 
 ---
 
-## Project Status — Stage 3 of 10 ✅
+## Project Status — Stage 4 of 10 ✅
 
 | Phase | Status |
 |---|---|
 | Environment setup & scaffolding | ✅ Complete |
 | Data collection (SIPRI, GFP, UCDP, World Bank) | ✅ Complete |
 | Exploratory Data Analysis | ✅ Complete |
-| Feature Engineering | 🔄 Up next |
-| ML Models (XGBoost, LogReg, MLP) | ⏳ Pending |
+| Feature Engineering — 6 domain vectors | ✅ Complete |
+| ML Models (XGBoost, LogReg, MLP) | 🔄 Up next |
 | Gap Analyzer & Recommendations Engine | ⏳ Pending |
 | Streamlit Dashboard | ⏳ Pending |
 | Polish & Deployment | ⏳ Pending |
@@ -82,7 +82,9 @@ DefDex/
 │   │   ├── gfp_raw.csv
 │   │   ├── ucdp_armed_conflict.csv
 │   │   └── worldbank_indicators.csv
-│   └── processed/                  # ML-ready feature vectors (Stage 4+)
+│   └── processed/                  # ML-ready feature vectors (Stage 4)
+│       ├── features.csv            # 3 countries x 42 features, 6 domains
+│       └── feature_dictionary.csv  # feature/domain/source/description map
 ├── notebooks/
 │   ├── 01_eda.ipynb                # Exploratory data analysis
 │   ├── defense_spend_trend.png     # China vs India vs Pakistan absolute spend
@@ -91,7 +93,8 @@ DefDex/
 │   ├── data_fetcher.py             # World Bank API integration
 │   └── scrapers.py                 # GFP data utilities
 ├── model/                          # Trained models (Stage 6+)
-├── pipeline/                       # Feature engineering pipeline (Stage 4+)
+├── pipeline/
+│   └── build_features.py           # Raw data → 6-domain feature vectors
 ├── dashboard/                      # Streamlit app (Stage 9+)
 ├── requirements.txt
 └── README.md
@@ -105,7 +108,7 @@ DefDex/
 Stage 1  ✅  Environment setup, folder scaffold, GitHub repo
 Stage 2  ✅  SIPRI, GFP, arms transfer data collected
 Stage 3  ✅  UCDP + World Bank data, EDA notebook, visualizations
-Stage 4  🔄  Feature engineering — 6 domain vectors
+Stage 4  ✅  Feature engineering — 42 features across 6 domain vectors
 Stage 5       Enrich features, build training set (X, y)
 Stage 6       XGBoost capability scorer + SHAP explainability
 Stage 7       War outcome predictor (LogReg + MLP ensemble)

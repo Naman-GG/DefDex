@@ -1,0 +1,43 @@
+feature,domain,source,description
+total_aircraft,weaponry,GFP,Total aircraft fleet
+combat_aircraft,weaponry,GFP,Combat-capable aircraft
+attack_helicopters,weaponry,GFP,Attack helicopters
+total_naval,weaponry,GFP,Total naval assets
+submarines,weaponry,GFP,Submarines
+total_land_vehicles,weaponry,GFP,Armoured land vehicles
+tanks,weaponry,GFP,Main battle tanks
+artillery,weaponry,GFP,Towed/self-propelled artillery
+rocket_artillery,weaponry,GFP,Rocket artillery (MLRS)
+combat_aircraft_ratio,weaponry,derived/GFP,Combat-capable aircraft as share of total fleet (force-quality proxy)
+weaponry_index,weaponry,derived,"Weighted min-max composite of platform inventories (combat platforms weighted higher), 0-1"
+active_personnel,manpower,GFP,Active-duty military personnel
+reserve_personnel,manpower,GFP,Reserve military personnel
+total_military_personnel,manpower,derived/GFP,Active + reserve personnel
+labor_force,manpower,GFP,National labour force
+total_population,manpower,GFP,Total population
+reserve_ratio,manpower,derived/GFP,Reserve-to-active personnel ratio (surge depth)
+mil_participation_rate,manpower,derived/GFP,Total military personnel as share of labour force (mobilization intensity)
+manpower_index,manpower,derived,"Composite of total + reserve personnel (normalized), 0-1"
+arms_supplier_count,geopolitics,SIPRI TIV,Number of distinct arms suppliers
+top_supplier_share,geopolitics,derived/SIPRI,Largest single supplier's share of imports (single-source risk)
+supplier_hhi,geopolitics,derived/SIPRI,Herfindahl index of supplier concentration (0-1; higher = more concentrated)
+total_tiv_imports,geopolitics,SIPRI TIV,Cumulative arms imports in SIPRI trend-indicator values
+import_dependency_index,geopolitics,derived,"Arms-import fragility: blend of import volume + supplier concentration, 0-1 (China NaN)"
+self_reliance_index,geopolitics,derived,"1 - import_dependency_index (domestic supply security, China NaN)"
+data_note,geopolitics,meta,Data-quality caveat per country
+border_km,terrain,GFP,Total land border length
+coastline_km,terrain,GFP,Total coastline length
+coastline_ratio,terrain,derived/GFP,Coastline share of total perimeter (maritime vs land-frontier exposure)
+defense_budget_usd,economic,GFP,Annual defense budget (USD)
+oil_production_bpd,economic,GFP,"Domestic oil production (barrels/day, energy resilience)"
+gdp_current_usd,economic,World Bank,"GDP, current USD (latest year)"
+gdp_per_capita,economic,World Bank,"GDP per capita, current USD (latest year)"
+military_spend_pct_gdp,economic,SIPRI/World Bank,Military spend as % of GDP
+defense_burden,economic,derived,Defense budget / GDP (economic strain of current spend)
+spend_per_soldier_usd,economic,derived,Defense budget per total serviceperson (capitalization proxy)
+economic_resilience_index,economic,derived,"Composite: GDP + per-capita + energy self-supply, penalized by defense burden, 0-1"
+total_conflict_episodes,conflict,UCDP,Distinct conflict-years country was a party to (any type)
+interstate_conflict_years,conflict,UCDP,Distinct years in state-vs-state (type 2) conflict
+high_intensity_years,conflict,UCDP,Years at war-level intensity (>1000 battle deaths)
+years_since_last_interstate,conflict,derived/UCDP,Years since most recent interstate conflict (recency)
+conflict_experience_index,conflict,derived,"Composite of interstate exposure, high-intensity years, and recency, 0-1"
