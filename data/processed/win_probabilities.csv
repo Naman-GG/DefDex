@@ -1,0 +1,2451 @@
+side_a,side_b,win_prob_a
+United States,Russia,0.948
+United States,China,0.919
+United States,India,0.975
+United States,South Korea,0.979
+United States,France,0.987
+United States,Japan,0.99
+United States,United Kingdom,0.987
+United States,Turkiye,0.988
+United States,Italy,0.989
+United States,Brazil,0.99
+United States,Germany,0.987
+United States,Indonesia,0.99
+United States,Pakistan,0.984
+United States,Israel,0.985
+United States,Iran,0.984
+United States,Australia,0.99
+United States,Spain,0.991
+United States,Egypt,0.988
+United States,Ukraine,0.99
+United States,Poland,0.992
+United States,Taiwan,0.988
+United States,Vietnam,0.973
+United States,Thailand,0.99
+United States,Saudi Arabia,0.991
+United States,Sweden,0.991
+United States,Algeria,0.991
+United States,Canada,0.99
+United States,Singapore,0.99
+United States,Greece,0.991
+United States,North Korea,0.986
+United States,Argentina,0.991
+United States,Nigeria,0.991
+United States,Netherlands,0.99
+United States,Myanmar,0.99
+United States,Mexico,0.991
+United States,Bangladesh,0.992
+United States,Portugal,0.992
+United States,Norway,0.99
+United States,South Africa,0.992
+United States,Philippines,0.99
+United States,Malaysia,0.991
+United States,Colombia,0.99
+United States,Iraq,0.987
+United States,Denmark,0.991
+United States,Switzerland,0.99
+United States,Ethiopia,0.989
+United States,Finland,0.99
+United States,Chile,0.992
+United States,Peru,0.99
+Russia,United States,0.06
+Russia,China,0.363
+Russia,India,0.761
+Russia,South Korea,0.812
+Russia,France,0.903
+Russia,Japan,0.933
+Russia,United Kingdom,0.903
+Russia,Turkiye,0.921
+Russia,Italy,0.93
+Russia,Brazil,0.932
+Russia,Germany,0.91
+Russia,Indonesia,0.932
+Russia,Pakistan,0.872
+Russia,Israel,0.89
+Russia,Iran,0.874
+Russia,Australia,0.939
+Russia,Spain,0.941
+Russia,Egypt,0.912
+Russia,Ukraine,0.939
+Russia,Poland,0.955
+Russia,Taiwan,0.911
+Russia,Vietnam,0.718
+Russia,Thailand,0.931
+Russia,Saudi Arabia,0.943
+Russia,Sweden,0.942
+Russia,Algeria,0.945
+Russia,Canada,0.938
+Russia,Singapore,0.937
+Russia,Greece,0.943
+Russia,North Korea,0.893
+Russia,Argentina,0.947
+Russia,Nigeria,0.94
+Russia,Netherlands,0.94
+Russia,Myanmar,0.933
+Russia,Mexico,0.947
+Russia,Bangladesh,0.953
+Russia,Portugal,0.949
+Russia,Norway,0.936
+Russia,South Africa,0.95
+Russia,Philippines,0.931
+Russia,Malaysia,0.948
+Russia,Colombia,0.935
+Russia,Iraq,0.907
+Russia,Denmark,0.946
+Russia,Switzerland,0.936
+Russia,Ethiopia,0.926
+Russia,Finland,0.938
+Russia,Chile,0.95
+Russia,Peru,0.938
+China,United States,0.096
+China,Russia,0.653
+China,India,0.856
+China,South Korea,0.889
+China,France,0.937
+China,Japan,0.956
+China,United Kingdom,0.937
+China,Turkiye,0.949
+China,Italy,0.955
+China,Brazil,0.956
+China,Germany,0.942
+China,Indonesia,0.956
+China,Pakistan,0.919
+China,Israel,0.93
+China,Iran,0.921
+China,Australia,0.96
+China,Spain,0.961
+China,Egypt,0.943
+China,Ukraine,0.96
+China,Poland,0.969
+China,Taiwan,0.943
+China,Vietnam,0.826
+China,Thailand,0.955
+China,Saudi Arabia,0.962
+China,Sweden,0.962
+China,Algeria,0.964
+China,Canada,0.959
+China,Singapore,0.959
+China,Greece,0.962
+China,North Korea,0.931
+China,Argentina,0.965
+China,Nigeria,0.961
+China,Netherlands,0.961
+China,Myanmar,0.957
+China,Mexico,0.965
+China,Bangladesh,0.968
+China,Portugal,0.966
+China,Norway,0.958
+China,South Africa,0.967
+China,Philippines,0.955
+China,Malaysia,0.965
+China,Colombia,0.958
+China,Iraq,0.94
+China,Denmark,0.964
+China,Switzerland,0.958
+China,Ethiopia,0.952
+China,Finland,0.959
+China,Chile,0.967
+China,Peru,0.959
+India,United States,0.026
+India,Russia,0.265
+India,China,0.166
+India,South Korea,0.582
+India,France,0.754
+India,Japan,0.841
+India,United Kingdom,0.755
+India,Turkiye,0.804
+India,Italy,0.831
+India,Brazil,0.832
+India,Germany,0.773
+India,Indonesia,0.833
+India,Pakistan,0.684
+India,Israel,0.72
+India,Iran,0.688
+India,Australia,0.856
+India,Spain,0.86
+India,Egypt,0.779
+India,Ukraine,0.861
+India,Poland,0.899
+India,Taiwan,0.774
+India,Vietnam,0.452
+India,Thailand,0.831
+India,Saudi Arabia,0.869
+India,Sweden,0.864
+India,Algeria,0.874
+India,Canada,0.851
+India,Singapore,0.848
+India,Greece,0.869
+India,North Korea,0.729
+India,Argentina,0.878
+India,Nigeria,0.858
+India,Netherlands,0.859
+India,Myanmar,0.839
+India,Mexico,0.879
+India,Bangladesh,0.894
+India,Portugal,0.885
+India,Norway,0.847
+India,South Africa,0.888
+India,Philippines,0.83
+India,Malaysia,0.88
+India,Colombia,0.842
+India,Iraq,0.764
+India,Denmark,0.876
+India,Switzerland,0.844
+India,Ethiopia,0.816
+India,Finland,0.849
+India,Chile,0.888
+India,Peru,0.85
+South Korea,United States,0.021
+South Korea,Russia,0.209
+South Korea,China,0.134
+South Korea,India,0.43
+South Korea,France,0.692
+South Korea,Japan,0.796
+South Korea,United Kingdom,0.693
+South Korea,Turkiye,0.75
+South Korea,Italy,0.784
+South Korea,Brazil,0.785
+South Korea,Germany,0.714
+South Korea,Indonesia,0.785
+South Korea,Pakistan,0.614
+South Korea,Israel,0.654
+South Korea,Iran,0.619
+South Korea,Australia,0.813
+South Korea,Spain,0.818
+South Korea,Egypt,0.721
+South Korea,Ukraine,0.823
+South Korea,Poland,0.873
+South Korea,Taiwan,0.715
+South Korea,Vietnam,0.379
+South Korea,Thailand,0.783
+South Korea,Saudi Arabia,0.829
+South Korea,Sweden,0.824
+South Korea,Algeria,0.836
+South Korea,Canada,0.807
+South Korea,Singapore,0.804
+South Korea,Greece,0.83
+South Korea,North Korea,0.663
+South Korea,Argentina,0.841
+South Korea,Nigeria,0.816
+South Korea,Netherlands,0.817
+South Korea,Myanmar,0.793
+South Korea,Mexico,0.842
+South Korea,Bangladesh,0.863
+South Korea,Portugal,0.849
+South Korea,Norway,0.803
+South Korea,South Africa,0.854
+South Korea,Philippines,0.782
+South Korea,Malaysia,0.843
+South Korea,Colombia,0.797
+South Korea,Iraq,0.704
+South Korea,Denmark,0.838
+South Korea,Switzerland,0.799
+South Korea,Ethiopia,0.766
+South Korea,Finland,0.805
+South Korea,Chile,0.854
+South Korea,Peru,0.806
+France,United States,0.012
+France,Russia,0.117
+France,China,0.074
+France,India,0.263
+France,South Korea,0.327
+France,Japan,0.635
+France,United Kingdom,0.507
+France,Turkiye,0.574
+France,Italy,0.618
+France,Brazil,0.62
+France,Germany,0.531
+France,Indonesia,0.621
+France,Pakistan,0.422
+France,Israel,0.463
+France,Iran,0.429
+France,Australia,0.661
+France,Spain,0.668
+France,Egypt,0.537
+France,Ukraine,0.678
+France,Poland,0.755
+France,Taiwan,0.531
+France,Vietnam,0.224
+France,Thailand,0.618
+France,Saudi Arabia,0.685
+France,Sweden,0.677
+France,Algeria,0.696
+France,Canada,0.652
+France,Singapore,0.647
+France,Greece,0.686
+France,North Korea,0.478
+France,Argentina,0.703
+France,Nigeria,0.665
+France,Netherlands,0.667
+France,Myanmar,0.631
+France,Mexico,0.705
+France,Bangladesh,0.738
+France,Portugal,0.716
+France,Norway,0.645
+France,South Africa,0.723
+France,Philippines,0.617
+France,Malaysia,0.706
+France,Colombia,0.637
+France,Iraq,0.515
+France,Denmark,0.698
+France,Switzerland,0.641
+France,Ethiopia,0.594
+France,Finland,0.649
+France,Chile,0.723
+France,Peru,0.651
+Japan,United States,0.008
+Japan,Russia,0.078
+Japan,China,0.048
+Japan,India,0.175
+Japan,South Korea,0.222
+Japan,France,0.377
+Japan,United Kingdom,0.376
+Japan,Turkiye,0.445
+Japan,Italy,0.488
+Japan,Brazil,0.488
+Japan,Germany,0.401
+Japan,Indonesia,0.487
+Japan,Pakistan,0.3
+Japan,Israel,0.337
+Japan,Iran,0.307
+Japan,Australia,0.531
+Japan,Spain,0.538
+Japan,Egypt,0.411
+Japan,Ukraine,0.552
+Japan,Poland,0.641
+Japan,Taiwan,0.404
+Japan,Vietnam,0.145
+Japan,Thailand,0.483
+Japan,Saudi Arabia,0.558
+Japan,Sweden,0.548
+Japan,Algeria,0.569
+Japan,Canada,0.521
+Japan,Singapore,0.516
+Japan,Greece,0.558
+Japan,North Korea,0.352
+Japan,Argentina,0.578
+Japan,Nigeria,0.535
+Japan,Netherlands,0.537
+Japan,Myanmar,0.497
+Japan,Mexico,0.58
+Japan,Bangladesh,0.619
+Japan,Portugal,0.594
+Japan,Norway,0.515
+Japan,South Africa,0.602
+Japan,Philippines,0.483
+Japan,Malaysia,0.581
+Japan,Colombia,0.504
+Japan,Iraq,0.386
+Japan,Denmark,0.572
+Japan,Switzerland,0.509
+Japan,Ethiopia,0.458
+Japan,Finland,0.517
+Japan,Chile,0.602
+Japan,Peru,0.518
+United Kingdom,United States,0.012
+United Kingdom,Russia,0.117
+United Kingdom,China,0.074
+United Kingdom,India,0.263
+United Kingdom,South Korea,0.328
+United Kingdom,France,0.506
+United Kingdom,Japan,0.635
+United Kingdom,Turkiye,0.574
+United Kingdom,Italy,0.618
+United Kingdom,Brazil,0.619
+United Kingdom,Germany,0.531
+United Kingdom,Indonesia,0.62
+United Kingdom,Pakistan,0.423
+United Kingdom,Israel,0.464
+United Kingdom,Iran,0.43
+United Kingdom,Australia,0.66
+United Kingdom,Spain,0.667
+United Kingdom,Egypt,0.537
+United Kingdom,Ukraine,0.678
+United Kingdom,Poland,0.755
+United Kingdom,Taiwan,0.531
+United Kingdom,Vietnam,0.225
+United Kingdom,Thailand,0.617
+United Kingdom,Saudi Arabia,0.684
+United Kingdom,Sweden,0.676
+United Kingdom,Algeria,0.695
+United Kingdom,Canada,0.651
+United Kingdom,Singapore,0.646
+United Kingdom,Greece,0.685
+United Kingdom,North Korea,0.479
+United Kingdom,Argentina,0.703
+United Kingdom,Nigeria,0.664
+United Kingdom,Netherlands,0.666
+United Kingdom,Myanmar,0.63
+United Kingdom,Mexico,0.704
+United Kingdom,Bangladesh,0.737
+United Kingdom,Portugal,0.716
+United Kingdom,Norway,0.645
+United Kingdom,South Africa,0.723
+United Kingdom,Philippines,0.616
+United Kingdom,Malaysia,0.705
+United Kingdom,Colombia,0.637
+United Kingdom,Iraq,0.514
+United Kingdom,Denmark,0.698
+United Kingdom,Switzerland,0.64
+United Kingdom,Ethiopia,0.593
+United Kingdom,Finland,0.648
+United Kingdom,Chile,0.722
+United Kingdom,Peru,0.65
+Turkiye,United States,0.01
+Turkiye,Russia,0.094
+Turkiye,China,0.059
+Turkiye,India,0.211
+Turkiye,South Korea,0.268
+Turkiye,France,0.436
+Turkiye,Japan,0.57
+Turkiye,United Kingdom,0.435
+Turkiye,Italy,0.552
+Turkiye,Brazil,0.552
+Turkiye,Germany,0.461
+Turkiye,Indonesia,0.551
+Turkiye,Pakistan,0.355
+Turkiye,Israel,0.394
+Turkiye,Iran,0.362
+Turkiye,Australia,0.594
+Turkiye,Spain,0.601
+Turkiye,Egypt,0.471
+Turkiye,Ukraine,0.616
+Turkiye,Poland,0.698
+Turkiye,Taiwan,0.465
+Turkiye,Vietnam,0.178
+Turkiye,Thailand,0.548
+Turkiye,Saudi Arabia,0.62
+Turkiye,Sweden,0.611
+Turkiye,Algeria,0.631
+Turkiye,Canada,0.584
+Turkiye,Singapore,0.58
+Turkiye,Greece,0.62
+Turkiye,North Korea,0.41
+Turkiye,Argentina,0.64
+Turkiye,Nigeria,0.598
+Turkiye,Netherlands,0.6
+Turkiye,Myanmar,0.562
+Turkiye,Mexico,0.641
+Turkiye,Bangladesh,0.678
+Turkiye,Portugal,0.654
+Turkiye,Norway,0.578
+Turkiye,South Africa,0.662
+Turkiye,Philippines,0.547
+Turkiye,Malaysia,0.643
+Turkiye,Colombia,0.568
+Turkiye,Iraq,0.446
+Turkiye,Denmark,0.634
+Turkiye,Switzerland,0.573
+Turkiye,Ethiopia,0.523
+Turkiye,Finland,0.581
+Turkiye,Chile,0.662
+Turkiye,Peru,0.582
+Italy,United States,0.009
+Italy,Russia,0.082
+Italy,China,0.051
+Italy,India,0.185
+Italy,South Korea,0.235
+Italy,France,0.394
+Italy,Japan,0.525
+Italy,United Kingdom,0.393
+Italy,Turkiye,0.463
+Italy,Brazil,0.506
+Italy,Germany,0.418
+Italy,Indonesia,0.506
+Italy,Pakistan,0.316
+Italy,Israel,0.353
+Italy,Iran,0.323
+Italy,Australia,0.55
+Italy,Spain,0.556
+Italy,Egypt,0.428
+Italy,Ukraine,0.572
+Italy,Poland,0.657
+Italy,Taiwan,0.422
+Italy,Vietnam,0.155
+Italy,Thailand,0.502
+Italy,Saudi Arabia,0.576
+Italy,Sweden,0.566
+Italy,Algeria,0.587
+Italy,Canada,0.539
+Italy,Singapore,0.535
+Italy,Greece,0.575
+Italy,North Korea,0.369
+Italy,Argentina,0.596
+Italy,Nigeria,0.553
+Italy,Netherlands,0.555
+Italy,Myanmar,0.516
+Italy,Mexico,0.597
+Italy,Bangladesh,0.637
+Italy,Portugal,0.611
+Italy,Norway,0.533
+Italy,South Africa,0.619
+Italy,Philippines,0.501
+Italy,Malaysia,0.599
+Italy,Colombia,0.522
+Italy,Iraq,0.404
+Italy,Denmark,0.59
+Italy,Switzerland,0.527
+Italy,Ethiopia,0.477
+Italy,Finland,0.535
+Italy,Chile,0.619
+Italy,Peru,0.537
+Brazil,United States,0.009
+Brazil,Russia,0.083
+Brazil,China,0.052
+Brazil,India,0.187
+Brazil,South Korea,0.234
+Brazil,France,0.393
+Brazil,Japan,0.525
+Brazil,United Kingdom,0.392
+Brazil,Turkiye,0.463
+Brazil,Italy,0.506
+Brazil,Germany,0.417
+Brazil,Indonesia,0.506
+Brazil,Pakistan,0.315
+Brazil,Israel,0.352
+Brazil,Iran,0.322
+Brazil,Australia,0.55
+Brazil,Spain,0.556
+Brazil,Egypt,0.428
+Brazil,Ukraine,0.569
+Brazil,Poland,0.656
+Brazil,Taiwan,0.421
+Brazil,Vietnam,0.154
+Brazil,Thailand,0.502
+Brazil,Saudi Arabia,0.576
+Brazil,Sweden,0.565
+Brazil,Algeria,0.585
+Brazil,Canada,0.539
+Brazil,Singapore,0.535
+Brazil,Greece,0.575
+Brazil,North Korea,0.368
+Brazil,Argentina,0.594
+Brazil,Nigeria,0.551
+Brazil,Netherlands,0.555
+Brazil,Myanmar,0.515
+Brazil,Mexico,0.596
+Brazil,Bangladesh,0.635
+Brazil,Portugal,0.61
+Brazil,Norway,0.533
+Brazil,South Africa,0.618
+Brazil,Philippines,0.501
+Brazil,Malaysia,0.598
+Brazil,Colombia,0.522
+Brazil,Iraq,0.403
+Brazil,Denmark,0.589
+Brazil,Switzerland,0.527
+Brazil,Ethiopia,0.476
+Brazil,Finland,0.535
+Brazil,Chile,0.617
+Brazil,Peru,0.535
+Germany,United States,0.012
+Germany,Russia,0.11
+Germany,China,0.069
+Germany,India,0.244
+Germany,South Korea,0.305
+Germany,France,0.482
+Germany,Japan,0.612
+Germany,United Kingdom,0.481
+Germany,Turkiye,0.549
+Germany,Italy,0.594
+Germany,Brazil,0.595
+Germany,Indonesia,0.597
+Germany,Pakistan,0.398
+Germany,Israel,0.438
+Germany,Iran,0.405
+Germany,Australia,0.638
+Germany,Spain,0.645
+Germany,Egypt,0.512
+Germany,Ukraine,0.656
+Germany,Poland,0.736
+Germany,Taiwan,0.506
+Germany,Vietnam,0.207
+Germany,Thailand,0.593
+Germany,Saudi Arabia,0.662
+Germany,Sweden,0.654
+Germany,Algeria,0.673
+Germany,Canada,0.628
+Germany,Singapore,0.623
+Germany,Greece,0.663
+Germany,North Korea,0.455
+Germany,Argentina,0.682
+Germany,Nigeria,0.642
+Germany,Netherlands,0.644
+Germany,Myanmar,0.607
+Germany,Mexico,0.683
+Germany,Bangladesh,0.718
+Germany,Portugal,0.695
+Germany,Norway,0.622
+Germany,South Africa,0.702
+Germany,Philippines,0.592
+Germany,Malaysia,0.684
+Germany,Colombia,0.613
+Germany,Iraq,0.49
+Germany,Denmark,0.676
+Germany,Switzerland,0.617
+Germany,Ethiopia,0.569
+Germany,Finland,0.625
+Germany,Chile,0.702
+Germany,Peru,0.627
+Indonesia,United States,0.009
+Indonesia,Russia,0.082
+Indonesia,China,0.051
+Indonesia,India,0.185
+Indonesia,South Korea,0.234
+Indonesia,France,0.392
+Indonesia,Japan,0.524
+Indonesia,United Kingdom,0.391
+Indonesia,Turkiye,0.462
+Indonesia,Italy,0.505
+Indonesia,Brazil,0.506
+Indonesia,Germany,0.417
+Indonesia,Pakistan,0.314
+Indonesia,Israel,0.351
+Indonesia,Iran,0.321
+Indonesia,Australia,0.55
+Indonesia,Spain,0.556
+Indonesia,Egypt,0.427
+Indonesia,Ukraine,0.568
+Indonesia,Poland,0.655
+Indonesia,Taiwan,0.42
+Indonesia,Vietnam,0.153
+Indonesia,Thailand,0.502
+Indonesia,Saudi Arabia,0.576
+Indonesia,Sweden,0.565
+Indonesia,Algeria,0.585
+Indonesia,Canada,0.539
+Indonesia,Singapore,0.535
+Indonesia,Greece,0.576
+Indonesia,North Korea,0.367
+Indonesia,Argentina,0.593
+Indonesia,Nigeria,0.551
+Indonesia,Netherlands,0.555
+Indonesia,Myanmar,0.516
+Indonesia,Mexico,0.595
+Indonesia,Bangladesh,0.634
+Indonesia,Portugal,0.608
+Indonesia,Norway,0.533
+Indonesia,South Africa,0.617
+Indonesia,Philippines,0.501
+Indonesia,Malaysia,0.596
+Indonesia,Colombia,0.522
+Indonesia,Iraq,0.402
+Indonesia,Denmark,0.589
+Indonesia,Switzerland,0.527
+Indonesia,Ethiopia,0.477
+Indonesia,Finland,0.535
+Indonesia,Chile,0.616
+Indonesia,Peru,0.536
+Pakistan,United States,0.015
+Pakistan,Russia,0.15
+Pakistan,China,0.095
+Pakistan,India,0.334
+Pakistan,South Korea,0.406
+Pakistan,France,0.59
+Pakistan,Japan,0.711
+Pakistan,United Kingdom,0.59
+Pakistan,Turkiye,0.655
+Pakistan,Italy,0.696
+Pakistan,Brazil,0.698
+Pakistan,Germany,0.614
+Pakistan,Indonesia,0.699
+Pakistan,Israel,0.546
+Pakistan,Iran,0.51
+Pakistan,Australia,0.734
+Pakistan,Spain,0.74
+Pakistan,Egypt,0.62
+Pakistan,Ukraine,0.748
+Pakistan,Poland,0.814
+Pakistan,Taiwan,0.614
+Pakistan,Vietnam,0.289
+Pakistan,Thailand,0.696
+Pakistan,Saudi Arabia,0.754
+Pakistan,Sweden,0.748
+Pakistan,Algeria,0.764
+Pakistan,Canada,0.726
+Pakistan,Singapore,0.722
+Pakistan,Greece,0.755
+Pakistan,North Korea,0.559
+Pakistan,Argentina,0.77
+Pakistan,Nigeria,0.738
+Pakistan,Netherlands,0.739
+Pakistan,Myanmar,0.708
+Pakistan,Mexico,0.771
+Pakistan,Bangladesh,0.799
+Pakistan,Portugal,0.781
+Pakistan,Norway,0.72
+Pakistan,South Africa,0.787
+Pakistan,Philippines,0.695
+Pakistan,Malaysia,0.773
+Pakistan,Colombia,0.713
+Pakistan,Iraq,0.601
+Pakistan,Denmark,0.766
+Pakistan,Switzerland,0.716
+Pakistan,Ethiopia,0.674
+Pakistan,Finland,0.723
+Pakistan,Chile,0.787
+Pakistan,Peru,0.725
+Israel,United States,0.014
+Israel,Russia,0.134
+Israel,China,0.084
+Israel,India,0.298
+Israel,South Korea,0.367
+Israel,France,0.55
+Israel,Japan,0.675
+Israel,United Kingdom,0.551
+Israel,Turkiye,0.617
+Israel,Italy,0.659
+Israel,Brazil,0.66
+Israel,Germany,0.575
+Israel,Indonesia,0.662
+Israel,Pakistan,0.465
+Israel,Iran,0.472
+Israel,Australia,0.699
+Israel,Spain,0.706
+Israel,Egypt,0.581
+Israel,Ukraine,0.716
+Israel,Poland,0.786
+Israel,Taiwan,0.575
+Israel,Vietnam,0.256
+Israel,Thailand,0.658
+Israel,Saudi Arabia,0.722
+Israel,Sweden,0.714
+Israel,Algeria,0.732
+Israel,Canada,0.691
+Israel,Singapore,0.686
+Israel,Greece,0.722
+Israel,North Korea,0.519
+Israel,Argentina,0.739
+Israel,Nigeria,0.703
+Israel,Netherlands,0.705
+Israel,Myanmar,0.671
+Israel,Mexico,0.74
+Israel,Bangladesh,0.771
+Israel,Portugal,0.751
+Israel,Norway,0.685
+Israel,South Africa,0.757
+Israel,Philippines,0.657
+Israel,Malaysia,0.741
+Israel,Colombia,0.677
+Israel,Iraq,0.559
+Israel,Denmark,0.734
+Israel,Switzerland,0.68
+Israel,Ethiopia,0.636
+Israel,Finland,0.688
+Israel,Chile,0.757
+Israel,Peru,0.689
+Iran,United States,0.015
+Iran,Russia,0.148
+Iran,China,0.094
+Iran,India,0.327
+Iran,South Korea,0.399
+Iran,France,0.586
+Iran,Japan,0.708
+Iran,United Kingdom,0.587
+Iran,Turkiye,0.651
+Iran,Italy,0.692
+Iran,Brazil,0.694
+Iran,Germany,0.611
+Iran,Indonesia,0.695
+Iran,Pakistan,0.502
+Iran,Israel,0.543
+Iran,Australia,0.73
+Iran,Spain,0.737
+Iran,Egypt,0.616
+Iran,Ukraine,0.745
+Iran,Poland,0.811
+Iran,Taiwan,0.611
+Iran,Vietnam,0.283
+Iran,Thailand,0.692
+Iran,Saudi Arabia,0.751
+Iran,Sweden,0.744
+Iran,Algeria,0.76
+Iran,Canada,0.722
+Iran,Singapore,0.718
+Iran,Greece,0.752
+Iran,North Korea,0.555
+Iran,Argentina,0.767
+Iran,Nigeria,0.734
+Iran,Netherlands,0.735
+Iran,Myanmar,0.704
+Iran,Mexico,0.768
+Iran,Bangladesh,0.796
+Iran,Portugal,0.778
+Iran,Norway,0.716
+Iran,South Africa,0.784
+Iran,Philippines,0.691
+Iran,Malaysia,0.769
+Iran,Colombia,0.709
+Iran,Iraq,0.596
+Iran,Denmark,0.763
+Iran,Switzerland,0.712
+Iran,Ethiopia,0.67
+Iran,Finland,0.72
+Iran,Chile,0.784
+Iran,Peru,0.721
+Australia,United States,0.008
+Australia,Russia,0.072
+Australia,China,0.045
+Australia,India,0.164
+Australia,South Korea,0.207
+Australia,France,0.356
+Australia,Japan,0.484
+Australia,United Kingdom,0.355
+Australia,Turkiye,0.423
+Australia,Italy,0.466
+Australia,Brazil,0.466
+Australia,Germany,0.379
+Australia,Indonesia,0.466
+Australia,Pakistan,0.282
+Australia,Israel,0.317
+Australia,Iran,0.288
+Australia,Spain,0.513
+Australia,Egypt,0.389
+Australia,Ukraine,0.524
+Australia,Poland,0.615
+Australia,Taiwan,0.383
+Australia,Vietnam,0.135
+Australia,Thailand,0.462
+Australia,Saudi Arabia,0.533
+Australia,Sweden,0.522
+Australia,Algeria,0.541
+Australia,Canada,0.497
+Australia,Singapore,0.492
+Australia,Greece,0.532
+Australia,North Korea,0.332
+Australia,Argentina,0.551
+Australia,Nigeria,0.507
+Australia,Netherlands,0.511
+Australia,Myanmar,0.473
+Australia,Mexico,0.552
+Australia,Bangladesh,0.593
+Australia,Portugal,0.566
+Australia,Norway,0.491
+Australia,South Africa,0.575
+Australia,Philippines,0.46
+Australia,Malaysia,0.554
+Australia,Colombia,0.48
+Australia,Iraq,0.365
+Australia,Denmark,0.546
+Australia,Switzerland,0.486
+Australia,Ethiopia,0.437
+Australia,Finland,0.492
+Australia,Chile,0.574
+Australia,Peru,0.492
+Spain,United States,0.008
+Spain,Russia,0.07
+Spain,China,0.044
+Spain,India,0.16
+Spain,South Korea,0.2
+Spain,France,0.346
+Spain,Japan,0.473
+Spain,United Kingdom,0.345
+Spain,Turkiye,0.413
+Spain,Italy,0.455
+Spain,Brazil,0.456
+Spain,Germany,0.369
+Spain,Indonesia,0.457
+Spain,Pakistan,0.273
+Spain,Israel,0.307
+Spain,Iran,0.279
+Spain,Australia,0.498
+Spain,Egypt,0.379
+Spain,Ukraine,0.514
+Spain,Poland,0.608
+Spain,Taiwan,0.372
+Spain,Vietnam,0.131
+Spain,Thailand,0.453
+Spain,Saudi Arabia,0.526
+Spain,Sweden,0.515
+Spain,Algeria,0.535
+Spain,Canada,0.489
+Spain,Singapore,0.484
+Spain,Greece,0.526
+Spain,North Korea,0.322
+Spain,Argentina,0.543
+Spain,Nigeria,0.501
+Spain,Netherlands,0.505
+Spain,Myanmar,0.466
+Spain,Mexico,0.545
+Spain,Bangladesh,0.585
+Spain,Portugal,0.559
+Spain,Norway,0.481
+Spain,South Africa,0.567
+Spain,Philippines,0.452
+Spain,Malaysia,0.546
+Spain,Colombia,0.473
+Spain,Iraq,0.355
+Spain,Denmark,0.54
+Spain,Switzerland,0.477
+Spain,Ethiopia,0.427
+Spain,Finland,0.485
+Spain,Chile,0.567
+Spain,Peru,0.485
+Egypt,United States,0.011
+Egypt,Russia,0.105
+Egypt,China,0.066
+Egypt,India,0.236
+Egypt,South Korea,0.296
+Egypt,France,0.471
+Egypt,Japan,0.606
+Egypt,United Kingdom,0.47
+Egypt,Turkiye,0.543
+Egypt,Italy,0.588
+Egypt,Brazil,0.588
+Egypt,Germany,0.496
+Egypt,Indonesia,0.588
+Egypt,Pakistan,0.388
+Egypt,Israel,0.428
+Egypt,Iran,0.395
+Egypt,Australia,0.63
+Egypt,Spain,0.637
+Egypt,Ukraine,0.651
+Egypt,Poland,0.729
+Egypt,Taiwan,0.5
+Egypt,Vietnam,0.2
+Egypt,Thailand,0.585
+Egypt,Saudi Arabia,0.655
+Egypt,Sweden,0.646
+Egypt,Algeria,0.666
+Egypt,Canada,0.62
+Egypt,Singapore,0.616
+Egypt,Greece,0.655
+Egypt,North Korea,0.445
+Egypt,Argentina,0.674
+Egypt,Nigeria,0.634
+Egypt,Netherlands,0.636
+Egypt,Myanmar,0.599
+Egypt,Mexico,0.675
+Egypt,Bangladesh,0.711
+Egypt,Portugal,0.688
+Egypt,Norway,0.614
+Egypt,South Africa,0.695
+Egypt,Philippines,0.584
+Egypt,Malaysia,0.677
+Egypt,Colombia,0.605
+Egypt,Iraq,0.483
+Egypt,Denmark,0.669
+Egypt,Switzerland,0.609
+Egypt,Ethiopia,0.561
+Egypt,Finland,0.617
+Egypt,Chile,0.695
+Egypt,Peru,0.619
+Ukraine,United States,0.008
+Ukraine,Russia,0.069
+Ukraine,China,0.042
+Ukraine,India,0.158
+Ukraine,South Korea,0.202
+Ukraine,France,0.349
+Ukraine,Japan,0.471
+Ukraine,United Kingdom,0.348
+Ukraine,Turkiye,0.413
+Ukraine,Italy,0.454
+Ukraine,Brazil,0.453
+Ukraine,Germany,0.372
+Ukraine,Indonesia,0.453
+Ukraine,Pakistan,0.276
+Ukraine,Israel,0.31
+Ukraine,Iran,0.282
+Ukraine,Australia,0.491
+Ukraine,Spain,0.5
+Ukraine,Egypt,0.382
+Ukraine,Poland,0.598
+Ukraine,Taiwan,0.375
+Ukraine,Vietnam,0.131
+Ukraine,Thailand,0.449
+Ukraine,Saudi Arabia,0.516
+Ukraine,Sweden,0.508
+Ukraine,Algeria,0.526
+Ukraine,Canada,0.484
+Ukraine,Singapore,0.479
+Ukraine,Greece,0.517
+Ukraine,North Korea,0.325
+Ukraine,Argentina,0.534
+Ukraine,Nigeria,0.494
+Ukraine,Netherlands,0.498
+Ukraine,Myanmar,0.461
+Ukraine,Mexico,0.536
+Ukraine,Bangladesh,0.576
+Ukraine,Portugal,0.549
+Ukraine,Norway,0.478
+Ukraine,South Africa,0.558
+Ukraine,Philippines,0.448
+Ukraine,Malaysia,0.537
+Ukraine,Colombia,0.468
+Ukraine,Iraq,0.359
+Ukraine,Denmark,0.53
+Ukraine,Switzerland,0.473
+Ukraine,Ethiopia,0.426
+Ukraine,Finland,0.48
+Ukraine,Chile,0.558
+Ukraine,Peru,0.48
+Poland,United States,0.006
+Poland,Russia,0.051
+Poland,China,0.032
+Poland,India,0.118
+Poland,South Korea,0.145
+Poland,France,0.263
+Poland,Japan,0.377
+Poland,United Kingdom,0.262
+Poland,Turkiye,0.321
+Poland,Italy,0.36
+Poland,Brazil,0.361
+Poland,Germany,0.283
+Poland,Indonesia,0.362
+Poland,Pakistan,0.202
+Poland,Israel,0.23
+Poland,Iran,0.207
+Poland,Australia,0.399
+Poland,Spain,0.409
+Poland,Egypt,0.291
+Poland,Ukraine,0.406
+Poland,Taiwan,0.286
+Poland,Vietnam,0.096
+Poland,Thailand,0.359
+Poland,Saudi Arabia,0.425
+Poland,Sweden,0.418
+Poland,Algeria,0.439
+Poland,Canada,0.392
+Poland,Singapore,0.387
+Poland,Greece,0.428
+Poland,North Korea,0.243
+Poland,Argentina,0.446
+Poland,Nigeria,0.404
+Poland,Netherlands,0.406
+Poland,Myanmar,0.371
+Poland,Mexico,0.448
+Poland,Bangladesh,0.483
+Poland,Portugal,0.46
+Poland,Norway,0.385
+Poland,South Africa,0.467
+Poland,Philippines,0.357
+Poland,Malaysia,0.449
+Poland,Colombia,0.378
+Poland,Iraq,0.271
+Poland,Denmark,0.44
+Poland,Switzerland,0.381
+Poland,Ethiopia,0.335
+Poland,Finland,0.39
+Poland,Chile,0.467
+Poland,Peru,0.39
+Taiwan,United States,0.011
+Taiwan,Russia,0.109
+Taiwan,China,0.068
+Taiwan,India,0.241
+Taiwan,South Korea,0.302
+Taiwan,France,0.478
+Taiwan,Japan,0.612
+Taiwan,United Kingdom,0.477
+Taiwan,Turkiye,0.549
+Taiwan,Italy,0.594
+Taiwan,Brazil,0.594
+Taiwan,Germany,0.503
+Taiwan,Indonesia,0.595
+Taiwan,Pakistan,0.394
+Taiwan,Israel,0.435
+Taiwan,Iran,0.402
+Taiwan,Australia,0.636
+Taiwan,Spain,0.643
+Taiwan,Egypt,0.512
+Taiwan,Ukraine,0.656
+Taiwan,Poland,0.734
+Taiwan,Vietnam,0.205
+Taiwan,Thailand,0.591
+Taiwan,Saudi Arabia,0.66
+Taiwan,Sweden,0.652
+Taiwan,Algeria,0.672
+Taiwan,Canada,0.626
+Taiwan,Singapore,0.622
+Taiwan,Greece,0.661
+Taiwan,North Korea,0.451
+Taiwan,Argentina,0.68
+Taiwan,Nigeria,0.64
+Taiwan,Netherlands,0.642
+Taiwan,Myanmar,0.605
+Taiwan,Mexico,0.681
+Taiwan,Bangladesh,0.716
+Taiwan,Portugal,0.693
+Taiwan,Norway,0.62
+Taiwan,South Africa,0.701
+Taiwan,Philippines,0.59
+Taiwan,Malaysia,0.683
+Taiwan,Colombia,0.611
+Taiwan,Iraq,0.489
+Taiwan,Denmark,0.675
+Taiwan,Switzerland,0.615
+Taiwan,Ethiopia,0.567
+Taiwan,Finland,0.624
+Taiwan,Chile,0.7
+Taiwan,Peru,0.625
+Vietnam,United States,0.032
+Vietnam,Russia,0.308
+Vietnam,China,0.2
+Vietnam,India,0.562
+Vietnam,South Korea,0.636
+Vietnam,France,0.793
+Vietnam,Japan,0.865
+Vietnam,United Kingdom,0.794
+Vietnam,Turkiye,0.836
+Vietnam,Italy,0.86
+Vietnam,Brazil,0.861
+Vietnam,Germany,0.809
+Vietnam,Indonesia,0.862
+Vietnam,Pakistan,0.73
+Vietnam,Israel,0.763
+Vietnam,Iran,0.734
+Vietnam,Australia,0.876
+Vietnam,Spain,0.88
+Vietnam,Egypt,0.815
+Vietnam,Ukraine,0.876
+Vietnam,Poland,0.908
+Vietnam,Taiwan,0.811
+Vietnam,Thailand,0.86
+Vietnam,Saudi Arabia,0.884
+Vietnam,Sweden,0.883
+Vietnam,Algeria,0.889
+Vietnam,Canada,0.874
+Vietnam,Singapore,0.872
+Vietnam,Greece,0.885
+Vietnam,North Korea,0.77
+Vietnam,Argentina,0.893
+Vietnam,Nigeria,0.879
+Vietnam,Netherlands,0.879
+Vietnam,Myanmar,0.866
+Vietnam,Mexico,0.893
+Vietnam,Bangladesh,0.904
+Vietnam,Portugal,0.897
+Vietnam,Norway,0.871
+Vietnam,South Africa,0.899
+Vietnam,Philippines,0.859
+Vietnam,Malaysia,0.894
+Vietnam,Colombia,0.869
+Vietnam,Iraq,0.802
+Vietnam,Denmark,0.89
+Vietnam,Switzerland,0.871
+Vietnam,Ethiopia,0.848
+Vietnam,Finland,0.874
+Vietnam,Chile,0.899
+Vietnam,Peru,0.874
+Thailand,United States,0.009
+Thailand,Russia,0.083
+Thailand,China,0.051
+Thailand,India,0.186
+Thailand,South Korea,0.236
+Thailand,France,0.396
+Thailand,Japan,0.528
+Thailand,United Kingdom,0.395
+Thailand,Turkiye,0.465
+Thailand,Italy,0.509
+Thailand,Brazil,0.51
+Thailand,Germany,0.42
+Thailand,Indonesia,0.51
+Thailand,Pakistan,0.318
+Thailand,Israel,0.355
+Thailand,Iran,0.324
+Thailand,Australia,0.554
+Thailand,Spain,0.56
+Thailand,Egypt,0.43
+Thailand,Ukraine,0.571
+Thailand,Poland,0.659
+Thailand,Taiwan,0.424
+Thailand,Vietnam,0.155
+Thailand,Saudi Arabia,0.58
+Thailand,Sweden,0.569
+Thailand,Algeria,0.589
+Thailand,Canada,0.543
+Thailand,Singapore,0.539
+Thailand,Greece,0.579
+Thailand,North Korea,0.37
+Thailand,Argentina,0.597
+Thailand,Nigeria,0.555
+Thailand,Netherlands,0.559
+Thailand,Myanmar,0.52
+Thailand,Mexico,0.599
+Thailand,Bangladesh,0.637
+Thailand,Portugal,0.612
+Thailand,Norway,0.537
+Thailand,South Africa,0.62
+Thailand,Philippines,0.505
+Thailand,Malaysia,0.6
+Thailand,Colombia,0.526
+Thailand,Iraq,0.405
+Thailand,Denmark,0.593
+Thailand,Switzerland,0.532
+Thailand,Ethiopia,0.481
+Thailand,Finland,0.54
+Thailand,Chile,0.62
+Thailand,Peru,0.54
+Saudi Arabia,United States,0.007
+Saudi Arabia,Russia,0.066
+Saudi Arabia,China,0.041
+Saudi Arabia,India,0.152
+Saudi Arabia,South Korea,0.19
+Saudi Arabia,France,0.331
+Saudi Arabia,Japan,0.457
+Saudi Arabia,United Kingdom,0.33
+Saudi Arabia,Turkiye,0.397
+Saudi Arabia,Italy,0.439
+Saudi Arabia,Brazil,0.44
+Saudi Arabia,Germany,0.354
+Saudi Arabia,Indonesia,0.441
+Saudi Arabia,Pakistan,0.26
+Saudi Arabia,Israel,0.294
+Saudi Arabia,Iran,0.266
+Saudi Arabia,Australia,0.479
+Saudi Arabia,Spain,0.487
+Saudi Arabia,Egypt,0.364
+Saudi Arabia,Ukraine,0.495
+Saudi Arabia,Poland,0.589
+Saudi Arabia,Taiwan,0.357
+Saudi Arabia,Vietnam,0.124
+Saudi Arabia,Thailand,0.437
+Saudi Arabia,Sweden,0.495
+Saudi Arabia,Algeria,0.515
+Saudi Arabia,Canada,0.472
+Saudi Arabia,Singapore,0.467
+Saudi Arabia,Greece,0.505
+Saudi Arabia,North Korea,0.308
+Saudi Arabia,Argentina,0.524
+Saudi Arabia,Nigeria,0.48
+Saudi Arabia,Netherlands,0.485
+Saudi Arabia,Myanmar,0.448
+Saudi Arabia,Mexico,0.525
+Saudi Arabia,Bangladesh,0.566
+Saudi Arabia,Portugal,0.54
+Saudi Arabia,Norway,0.465
+Saudi Arabia,South Africa,0.548
+Saudi Arabia,Philippines,0.435
+Saudi Arabia,Malaysia,0.527
+Saudi Arabia,Colombia,0.455
+Saudi Arabia,Iraq,0.34
+Saudi Arabia,Denmark,0.519
+Saudi Arabia,Switzerland,0.461
+Saudi Arabia,Ethiopia,0.412
+Saudi Arabia,Finland,0.467
+Saudi Arabia,Chile,0.548
+Saudi Arabia,Peru,0.466
+Sweden,United States,0.008
+Sweden,Russia,0.068
+Sweden,China,0.042
+Sweden,India,0.156
+Sweden,South Korea,0.194
+Sweden,France,0.338
+Sweden,Japan,0.464
+Sweden,United Kingdom,0.337
+Sweden,Turkiye,0.404
+Sweden,Italy,0.446
+Sweden,Brazil,0.447
+Sweden,Germany,0.36
+Sweden,Indonesia,0.448
+Sweden,Pakistan,0.266
+Sweden,Israel,0.3
+Sweden,Iran,0.272
+Sweden,Australia,0.487
+Sweden,Spain,0.497
+Sweden,Egypt,0.37
+Sweden,Ukraine,0.503
+Sweden,Poland,0.599
+Sweden,Taiwan,0.364
+Sweden,Vietnam,0.128
+Sweden,Thailand,0.444
+Sweden,Saudi Arabia,0.517
+Sweden,Algeria,0.526
+Sweden,Canada,0.48
+Sweden,Singapore,0.475
+Sweden,Greece,0.516
+Sweden,North Korea,0.314
+Sweden,Argentina,0.534
+Sweden,Nigeria,0.491
+Sweden,Netherlands,0.495
+Sweden,Myanmar,0.457
+Sweden,Mexico,0.536
+Sweden,Bangladesh,0.575
+Sweden,Portugal,0.55
+Sweden,Norway,0.472
+Sweden,South Africa,0.557
+Sweden,Philippines,0.443
+Sweden,Malaysia,0.537
+Sweden,Colombia,0.465
+Sweden,Iraq,0.347
+Sweden,Denmark,0.53
+Sweden,Switzerland,0.468
+Sweden,Ethiopia,0.418
+Sweden,Finland,0.477
+Sweden,Chile,0.557
+Sweden,Peru,0.476
+Algeria,United States,0.007
+Algeria,Russia,0.063
+Algeria,China,0.039
+Algeria,India,0.145
+Algeria,South Korea,0.181
+Algeria,France,0.319
+Algeria,Japan,0.443
+Algeria,United Kingdom,0.318
+Algeria,Turkiye,0.383
+Algeria,Italy,0.425
+Algeria,Brazil,0.426
+Algeria,Germany,0.341
+Algeria,Indonesia,0.427
+Algeria,Pakistan,0.25
+Algeria,Israel,0.282
+Algeria,Iran,0.255
+Algeria,Australia,0.466
+Algeria,Spain,0.476
+Algeria,Egypt,0.351
+Algeria,Ukraine,0.478
+Algeria,Poland,0.58
+Algeria,Taiwan,0.344
+Algeria,Vietnam,0.119
+Algeria,Thailand,0.423
+Algeria,Saudi Arabia,0.493
+Algeria,Sweden,0.486
+Algeria,Canada,0.459
+Algeria,Singapore,0.454
+Algeria,Greece,0.495
+Algeria,North Korea,0.296
+Algeria,Argentina,0.515
+Algeria,Nigeria,0.471
+Algeria,Netherlands,0.473
+Algeria,Myanmar,0.436
+Algeria,Mexico,0.517
+Algeria,Bangladesh,0.556
+Algeria,Portugal,0.53
+Algeria,Norway,0.451
+Algeria,South Africa,0.538
+Algeria,Philippines,0.422
+Algeria,Malaysia,0.518
+Algeria,Colombia,0.444
+Algeria,Iraq,0.328
+Algeria,Denmark,0.51
+Algeria,Switzerland,0.447
+Algeria,Ethiopia,0.398
+Algeria,Finland,0.456
+Algeria,Chile,0.538
+Algeria,Peru,0.457
+Canada,United States,0.008
+Canada,Russia,0.075
+Canada,China,0.047
+Canada,India,0.17
+Canada,South Korea,0.212
+Canada,France,0.362
+Canada,Japan,0.491
+Canada,United Kingdom,0.361
+Canada,Turkiye,0.43
+Canada,Italy,0.473
+Canada,Brazil,0.474
+Canada,Germany,0.386
+Canada,Indonesia,0.474
+Canada,Pakistan,0.287
+Canada,Israel,0.323
+Canada,Iran,0.294
+Canada,Australia,0.517
+Canada,Spain,0.523
+Canada,Egypt,0.396
+Canada,Ukraine,0.533
+Canada,Poland,0.624
+Canada,Taiwan,0.389
+Canada,Vietnam,0.139
+Canada,Thailand,0.47
+Canada,Saudi Arabia,0.544
+Canada,Sweden,0.532
+Canada,Algeria,0.552
+Canada,Singapore,0.502
+Canada,Greece,0.543
+Canada,North Korea,0.338
+Canada,Argentina,0.561
+Canada,Nigeria,0.518
+Canada,Netherlands,0.522
+Canada,Myanmar,0.482
+Canada,Mexico,0.562
+Canada,Bangladesh,0.602
+Canada,Portugal,0.576
+Canada,Norway,0.5
+Canada,South Africa,0.584
+Canada,Philippines,0.468
+Canada,Malaysia,0.564
+Canada,Colombia,0.489
+Canada,Iraq,0.371
+Canada,Denmark,0.557
+Canada,Switzerland,0.494
+Canada,Ethiopia,0.445
+Canada,Finland,0.502
+Canada,Chile,0.584
+Canada,Peru,0.502
+Singapore,United States,0.008
+Singapore,Russia,0.076
+Singapore,China,0.047
+Singapore,India,0.172
+Singapore,South Korea,0.215
+Singapore,France,0.367
+Singapore,Japan,0.496
+Singapore,United Kingdom,0.366
+Singapore,Turkiye,0.435
+Singapore,Italy,0.478
+Singapore,Brazil,0.478
+Singapore,Germany,0.391
+Singapore,Indonesia,0.478
+Singapore,Pakistan,0.292
+Singapore,Israel,0.327
+Singapore,Iran,0.298
+Singapore,Australia,0.521
+Singapore,Spain,0.528
+Singapore,Egypt,0.401
+Singapore,Ukraine,0.539
+Singapore,Poland,0.629
+Singapore,Taiwan,0.394
+Singapore,Vietnam,0.141
+Singapore,Thailand,0.474
+Singapore,Saudi Arabia,0.548
+Singapore,Sweden,0.537
+Singapore,Algeria,0.557
+Singapore,Canada,0.511
+Singapore,Greece,0.547
+Singapore,North Korea,0.342
+Singapore,Argentina,0.566
+Singapore,Nigeria,0.522
+Singapore,Netherlands,0.526
+Singapore,Myanmar,0.487
+Singapore,Mexico,0.567
+Singapore,Bangladesh,0.607
+Singapore,Portugal,0.581
+Singapore,Norway,0.504
+Singapore,South Africa,0.59
+Singapore,Philippines,0.473
+Singapore,Malaysia,0.569
+Singapore,Colombia,0.494
+Singapore,Iraq,0.376
+Singapore,Denmark,0.561
+Singapore,Switzerland,0.499
+Singapore,Ethiopia,0.449
+Singapore,Finland,0.507
+Singapore,Chile,0.589
+Singapore,Peru,0.507
+Greece,United States,0.007
+Greece,Russia,0.066
+Greece,China,0.041
+Greece,India,0.151
+Greece,South Korea,0.188
+Greece,France,0.329
+Greece,Japan,0.455
+Greece,United Kingdom,0.328
+Greece,Turkiye,0.394
+Greece,Italy,0.437
+Greece,Brazil,0.437
+Greece,Germany,0.352
+Greece,Indonesia,0.438
+Greece,Pakistan,0.258
+Greece,Israel,0.292
+Greece,Iran,0.264
+Greece,Australia,0.477
+Greece,Spain,0.488
+Greece,Egypt,0.361
+Greece,Ukraine,0.492
+Greece,Poland,0.589
+Greece,Taiwan,0.355
+Greece,Vietnam,0.123
+Greece,Thailand,0.435
+Greece,Saudi Arabia,0.506
+Greece,Sweden,0.496
+Greece,Algeria,0.515
+Greece,Canada,0.47
+Greece,Singapore,0.465
+Greece,North Korea,0.306
+Greece,Argentina,0.524
+Greece,Nigeria,0.481
+Greece,Netherlands,0.485
+Greece,Myanmar,0.447
+Greece,Mexico,0.526
+Greece,Bangladesh,0.566
+Greece,Portugal,0.539
+Greece,Norway,0.462
+Greece,South Africa,0.547
+Greece,Philippines,0.433
+Greece,Malaysia,0.527
+Greece,Colombia,0.455
+Greece,Iraq,0.338
+Greece,Denmark,0.52
+Greece,Switzerland,0.458
+Greece,Ethiopia,0.409
+Greece,Finland,0.467
+Greece,Chile,0.547
+Greece,Peru,0.467
+North Korea,United States,0.013
+North Korea,Russia,0.128
+North Korea,China,0.081
+North Korea,India,0.284
+North Korea,South Korea,0.351
+North Korea,France,0.538
+North Korea,Japan,0.666
+North Korea,United Kingdom,0.538
+North Korea,Turkiye,0.606
+North Korea,Italy,0.649
+North Korea,Brazil,0.651
+North Korea,Germany,0.563
+North Korea,Indonesia,0.652
+North Korea,Pakistan,0.449
+North Korea,Israel,0.494
+North Korea,Iran,0.456
+North Korea,Australia,0.69
+North Korea,Spain,0.697
+North Korea,Egypt,0.569
+North Korea,Ukraine,0.706
+North Korea,Poland,0.779
+North Korea,Taiwan,0.563
+North Korea,Vietnam,0.243
+North Korea,Thailand,0.649
+North Korea,Saudi Arabia,0.713
+North Korea,Sweden,0.706
+North Korea,Algeria,0.723
+North Korea,Canada,0.682
+North Korea,Singapore,0.677
+North Korea,Greece,0.714
+North Korea,Argentina,0.73
+North Korea,Nigeria,0.694
+North Korea,Netherlands,0.696
+North Korea,Myanmar,0.662
+North Korea,Mexico,0.732
+North Korea,Bangladesh,0.763
+North Korea,Portugal,0.743
+North Korea,Norway,0.675
+North Korea,South Africa,0.749
+North Korea,Philippines,0.648
+North Korea,Malaysia,0.733
+North Korea,Colombia,0.668
+North Korea,Iraq,0.548
+North Korea,Denmark,0.726
+North Korea,Switzerland,0.671
+North Korea,Ethiopia,0.626
+North Korea,Finland,0.679
+North Korea,Chile,0.749
+North Korea,Peru,0.68
+Argentina,United States,0.007
+Argentina,Russia,0.062
+Argentina,China,0.038
+Argentina,India,0.143
+Argentina,South Korea,0.177
+Argentina,France,0.313
+Argentina,Japan,0.436
+Argentina,United Kingdom,0.312
+Argentina,Turkiye,0.377
+Argentina,Italy,0.418
+Argentina,Brazil,0.419
+Argentina,Germany,0.334
+Argentina,Indonesia,0.42
+Argentina,Pakistan,0.244
+Argentina,Israel,0.276
+Argentina,Iran,0.25
+Argentina,Australia,0.458
+Argentina,Spain,0.469
+Argentina,Egypt,0.344
+Argentina,Ukraine,0.469
+Argentina,Poland,0.572
+Argentina,Taiwan,0.338
+Argentina,Vietnam,0.117
+Argentina,Thailand,0.416
+Argentina,Saudi Arabia,0.485
+Argentina,Sweden,0.478
+Argentina,Algeria,0.498
+Argentina,Canada,0.451
+Argentina,Singapore,0.446
+Argentina,Greece,0.488
+Argentina,North Korea,0.29
+Argentina,Nigeria,0.464
+Argentina,Netherlands,0.466
+Argentina,Myanmar,0.429
+Argentina,Mexico,0.508
+Argentina,Bangladesh,0.547
+Argentina,Portugal,0.522
+Argentina,Norway,0.444
+Argentina,South Africa,0.529
+Argentina,Philippines,0.415
+Argentina,Malaysia,0.509
+Argentina,Colombia,0.437
+Argentina,Iraq,0.321
+Argentina,Denmark,0.501
+Argentina,Switzerland,0.439
+Argentina,Ethiopia,0.391
+Argentina,Finland,0.449
+Argentina,Chile,0.53
+Argentina,Peru,0.449
+Nigeria,United States,0.008
+Nigeria,Russia,0.071
+Nigeria,China,0.044
+Nigeria,India,0.161
+Nigeria,South Korea,0.203
+Nigeria,France,0.351
+Nigeria,Japan,0.479
+Nigeria,United Kingdom,0.35
+Nigeria,Turkiye,0.418
+Nigeria,Italy,0.461
+Nigeria,Brazil,0.461
+Nigeria,Germany,0.374
+Nigeria,Indonesia,0.462
+Nigeria,Pakistan,0.277
+Nigeria,Israel,0.312
+Nigeria,Iran,0.283
+Nigeria,Australia,0.501
+Nigeria,Spain,0.512
+Nigeria,Egypt,0.384
+Nigeria,Ukraine,0.517
+Nigeria,Poland,0.613
+Nigeria,Taiwan,0.377
+Nigeria,Vietnam,0.132
+Nigeria,Thailand,0.459
+Nigeria,Saudi Arabia,0.53
+Nigeria,Sweden,0.521
+Nigeria,Algeria,0.54
+Nigeria,Canada,0.494
+Nigeria,Singapore,0.489
+Nigeria,Greece,0.531
+Nigeria,North Korea,0.327
+Nigeria,Argentina,0.549
+Nigeria,Netherlands,0.509
+Nigeria,Myanmar,0.472
+Nigeria,Mexico,0.551
+Nigeria,Bangladesh,0.589
+Nigeria,Portugal,0.564
+Nigeria,Norway,0.486
+Nigeria,South Africa,0.572
+Nigeria,Philippines,0.457
+Nigeria,Malaysia,0.552
+Nigeria,Colombia,0.48
+Nigeria,Iraq,0.36
+Nigeria,Denmark,0.545
+Nigeria,Switzerland,0.482
+Nigeria,Ethiopia,0.433
+Nigeria,Finland,0.492
+Nigeria,Chile,0.572
+Nigeria,Peru,0.492
+Netherlands,United States,0.008
+Netherlands,Russia,0.071
+Netherlands,China,0.044
+Netherlands,India,0.162
+Netherlands,South Korea,0.202
+Netherlands,France,0.349
+Netherlands,Japan,0.477
+Netherlands,United Kingdom,0.348
+Netherlands,Turkiye,0.416
+Netherlands,Italy,0.458
+Netherlands,Brazil,0.459
+Netherlands,Germany,0.372
+Netherlands,Indonesia,0.46
+Netherlands,Pakistan,0.276
+Netherlands,Israel,0.31
+Netherlands,Iran,0.282
+Netherlands,Australia,0.501
+Netherlands,Spain,0.508
+Netherlands,Egypt,0.382
+Netherlands,Ukraine,0.516
+Netherlands,Poland,0.609
+Netherlands,Taiwan,0.375
+Netherlands,Vietnam,0.132
+Netherlands,Thailand,0.456
+Netherlands,Saudi Arabia,0.528
+Netherlands,Sweden,0.517
+Netherlands,Algeria,0.536
+Netherlands,Canada,0.491
+Netherlands,Singapore,0.487
+Netherlands,Greece,0.527
+Netherlands,North Korea,0.325
+Netherlands,Argentina,0.545
+Netherlands,Nigeria,0.502
+Netherlands,Myanmar,0.468
+Netherlands,Mexico,0.547
+Netherlands,Bangladesh,0.587
+Netherlands,Portugal,0.56
+Netherlands,Norway,0.484
+Netherlands,South Africa,0.568
+Netherlands,Philippines,0.454
+Netherlands,Malaysia,0.548
+Netherlands,Colombia,0.474
+Netherlands,Iraq,0.358
+Netherlands,Denmark,0.541
+Netherlands,Switzerland,0.48
+Netherlands,Ethiopia,0.431
+Netherlands,Finland,0.487
+Netherlands,Chile,0.568
+Netherlands,Peru,0.487
+Myanmar,United States,0.009
+Myanmar,Russia,0.079
+Myanmar,China,0.049
+Myanmar,India,0.178
+Myanmar,South Korea,0.227
+Myanmar,France,0.384
+Myanmar,Japan,0.514
+Myanmar,United Kingdom,0.383
+Myanmar,Turkiye,0.452
+Myanmar,Italy,0.496
+Myanmar,Brazil,0.497
+Myanmar,Germany,0.408
+Myanmar,Indonesia,0.497
+Myanmar,Pakistan,0.307
+Myanmar,Israel,0.343
+Myanmar,Iran,0.313
+Myanmar,Australia,0.54
+Myanmar,Spain,0.547
+Myanmar,Egypt,0.418
+Myanmar,Ukraine,0.556
+Myanmar,Poland,0.646
+Myanmar,Taiwan,0.411
+Myanmar,Vietnam,0.149
+Myanmar,Thailand,0.493
+Myanmar,Saudi Arabia,0.567
+Myanmar,Sweden,0.556
+Myanmar,Algeria,0.575
+Myanmar,Canada,0.53
+Myanmar,Singapore,0.525
+Myanmar,Greece,0.566
+Myanmar,North Korea,0.358
+Myanmar,Argentina,0.584
+Myanmar,Nigeria,0.541
+Myanmar,Netherlands,0.546
+Myanmar,Mexico,0.585
+Myanmar,Bangladesh,0.624
+Myanmar,Portugal,0.599
+Myanmar,Norway,0.523
+Myanmar,South Africa,0.606
+Myanmar,Philippines,0.492
+Myanmar,Malaysia,0.587
+Myanmar,Colombia,0.513
+Myanmar,Iraq,0.393
+Myanmar,Denmark,0.58
+Myanmar,Switzerland,0.518
+Myanmar,Ethiopia,0.468
+Myanmar,Finland,0.526
+Myanmar,Chile,0.606
+Myanmar,Peru,0.526
+Mexico,United States,0.007
+Mexico,Russia,0.062
+Mexico,China,0.038
+Mexico,India,0.143
+Mexico,South Korea,0.176
+Mexico,France,0.311
+Mexico,Japan,0.434
+Mexico,United Kingdom,0.31
+Mexico,Turkiye,0.375
+Mexico,Italy,0.416
+Mexico,Brazil,0.417
+Mexico,Germany,0.333
+Mexico,Indonesia,0.418
+Mexico,Pakistan,0.243
+Mexico,Israel,0.275
+Mexico,Iran,0.248
+Mexico,Australia,0.456
+Mexico,Spain,0.467
+Mexico,Egypt,0.342
+Mexico,Ukraine,0.468
+Mexico,Poland,0.57
+Mexico,Taiwan,0.336
+Mexico,Vietnam,0.117
+Mexico,Thailand,0.414
+Mexico,Saudi Arabia,0.483
+Mexico,Sweden,0.476
+Mexico,Algeria,0.496
+Mexico,Canada,0.449
+Mexico,Singapore,0.444
+Mexico,Greece,0.486
+Mexico,North Korea,0.288
+Mexico,Argentina,0.504
+Mexico,Nigeria,0.462
+Mexico,Netherlands,0.464
+Mexico,Myanmar,0.427
+Mexico,Bangladesh,0.545
+Mexico,Portugal,0.52
+Mexico,Norway,0.442
+Mexico,South Africa,0.527
+Mexico,Philippines,0.413
+Mexico,Malaysia,0.507
+Mexico,Colombia,0.435
+Mexico,Iraq,0.319
+Mexico,Denmark,0.499
+Mexico,Switzerland,0.437
+Mexico,Ethiopia,0.389
+Mexico,Finland,0.447
+Mexico,Chile,0.528
+Mexico,Peru,0.448
+Bangladesh,United States,0.006
+Bangladesh,Russia,0.054
+Bangladesh,China,0.034
+Bangladesh,India,0.126
+Bangladesh,South Korea,0.154
+Bangladesh,France,0.278
+Bangladesh,Japan,0.395
+Bangladesh,United Kingdom,0.277
+Bangladesh,Turkiye,0.338
+Bangladesh,Italy,0.378
+Bangladesh,Brazil,0.379
+Bangladesh,Germany,0.298
+Bangladesh,Indonesia,0.38
+Bangladesh,Pakistan,0.215
+Bangladesh,Israel,0.244
+Bangladesh,Iran,0.22
+Bangladesh,Australia,0.417
+Bangladesh,Spain,0.428
+Bangladesh,Egypt,0.307
+Bangladesh,Ukraine,0.425
+Bangladesh,Poland,0.531
+Bangladesh,Taiwan,0.301
+Bangladesh,Vietnam,0.102
+Bangladesh,Thailand,0.376
+Bangladesh,Saudi Arabia,0.444
+Bangladesh,Sweden,0.437
+Bangladesh,Algeria,0.458
+Bangladesh,Canada,0.41
+Bangladesh,Singapore,0.405
+Bangladesh,Greece,0.446
+Bangladesh,North Korea,0.257
+Bangladesh,Argentina,0.465
+Bangladesh,Nigeria,0.423
+Bangladesh,Netherlands,0.425
+Bangladesh,Myanmar,0.389
+Bangladesh,Mexico,0.467
+Bangladesh,Portugal,0.481
+Bangladesh,Norway,0.403
+Bangladesh,South Africa,0.488
+Bangladesh,Philippines,0.375
+Bangladesh,Malaysia,0.468
+Bangladesh,Colombia,0.396
+Bangladesh,Iraq,0.286
+Bangladesh,Denmark,0.459
+Bangladesh,Switzerland,0.399
+Bangladesh,Ethiopia,0.352
+Bangladesh,Finland,0.408
+Bangladesh,Chile,0.489
+Bangladesh,Peru,0.408
+Portugal,United States,0.007
+Portugal,Russia,0.059
+Portugal,China,0.037
+Portugal,India,0.137
+Portugal,South Korea,0.168
+Portugal,France,0.299
+Portugal,Japan,0.421
+Portugal,United Kingdom,0.299
+Portugal,Turkiye,0.362
+Portugal,Italy,0.403
+Portugal,Brazil,0.404
+Portugal,Germany,0.321
+Portugal,Indonesia,0.405
+Portugal,Pakistan,0.233
+Portugal,Israel,0.264
+Portugal,Iran,0.238
+Portugal,Australia,0.443
+Portugal,Spain,0.454
+Portugal,Egypt,0.33
+Portugal,Ukraine,0.452
+Portugal,Poland,0.557
+Portugal,Taiwan,0.324
+Portugal,Vietnam,0.111
+Portugal,Thailand,0.401
+Portugal,Saudi Arabia,0.47
+Portugal,Sweden,0.463
+Portugal,Algeria,0.483
+Portugal,Canada,0.436
+Portugal,Singapore,0.431
+Portugal,Greece,0.472
+Portugal,North Korea,0.277
+Portugal,Argentina,0.491
+Portugal,Nigeria,0.448
+Portugal,Netherlands,0.451
+Portugal,Myanmar,0.414
+Portugal,Mexico,0.493
+Portugal,Bangladesh,0.532
+Portugal,Norway,0.428
+Portugal,South Africa,0.514
+Portugal,Philippines,0.4
+Portugal,Malaysia,0.494
+Portugal,Colombia,0.422
+Portugal,Iraq,0.308
+Portugal,Denmark,0.485
+Portugal,Switzerland,0.424
+Portugal,Ethiopia,0.376
+Portugal,Finland,0.433
+Portugal,Chile,0.514
+Portugal,Peru,0.434
+Norway,United States,0.008
+Norway,Russia,0.077
+Norway,China,0.048
+Norway,India,0.173
+Norway,South Korea,0.217
+Norway,France,0.369
+Norway,Japan,0.498
+Norway,United Kingdom,0.369
+Norway,Turkiye,0.438
+Norway,Italy,0.481
+Norway,Brazil,0.48
+Norway,Germany,0.393
+Norway,Indonesia,0.479
+Norway,Pakistan,0.294
+Norway,Israel,0.33
+Norway,Iran,0.3
+Norway,Australia,0.523
+Norway,Spain,0.529
+Norway,Egypt,0.403
+Norway,Ukraine,0.542
+Norway,Poland,0.631
+Norway,Taiwan,0.397
+Norway,Vietnam,0.142
+Norway,Thailand,0.475
+Norway,Saudi Arabia,0.55
+Norway,Sweden,0.539
+Norway,Algeria,0.559
+Norway,Canada,0.512
+Norway,Singapore,0.508
+Norway,Greece,0.549
+Norway,North Korea,0.345
+Norway,Argentina,0.568
+Norway,Nigeria,0.524
+Norway,Netherlands,0.528
+Norway,Myanmar,0.488
+Norway,Mexico,0.569
+Norway,Bangladesh,0.609
+Norway,Portugal,0.583
+Norway,South Africa,0.592
+Norway,Philippines,0.474
+Norway,Malaysia,0.571
+Norway,Colombia,0.495
+Norway,Iraq,0.379
+Norway,Denmark,0.563
+Norway,Switzerland,0.5
+Norway,Ethiopia,0.451
+Norway,Finland,0.508
+Norway,Chile,0.591
+Norway,Peru,0.509
+South Africa,United States,0.007
+South Africa,Russia,0.057
+South Africa,China,0.036
+South Africa,India,0.133
+South Africa,South Korea,0.164
+South Africa,France,0.293
+South Africa,Japan,0.413
+South Africa,United Kingdom,0.292
+South Africa,Turkiye,0.355
+South Africa,Italy,0.395
+South Africa,Brazil,0.396
+South Africa,Germany,0.314
+South Africa,Indonesia,0.397
+South Africa,Pakistan,0.227
+South Africa,Israel,0.258
+South Africa,Iran,0.233
+South Africa,Australia,0.435
+South Africa,Spain,0.446
+South Africa,Egypt,0.323
+South Africa,Ukraine,0.443
+South Africa,Poland,0.549
+South Africa,Taiwan,0.317
+South Africa,Vietnam,0.108
+South Africa,Thailand,0.393
+South Africa,Saudi Arabia,0.462
+South Africa,Sweden,0.455
+South Africa,Algeria,0.476
+South Africa,Canada,0.428
+South Africa,Singapore,0.423
+South Africa,Greece,0.464
+South Africa,North Korea,0.271
+South Africa,Argentina,0.483
+South Africa,Nigeria,0.44
+South Africa,Netherlands,0.443
+South Africa,Myanmar,0.406
+South Africa,Mexico,0.485
+South Africa,Bangladesh,0.524
+South Africa,Portugal,0.498
+South Africa,Norway,0.42
+South Africa,Philippines,0.392
+South Africa,Malaysia,0.486
+South Africa,Colombia,0.414
+South Africa,Iraq,0.301
+South Africa,Denmark,0.477
+South Africa,Switzerland,0.416
+South Africa,Ethiopia,0.369
+South Africa,Finland,0.425
+South Africa,Chile,0.506
+South Africa,Peru,0.426
+Philippines,United States,0.009
+Philippines,Russia,0.084
+Philippines,China,0.052
+Philippines,India,0.189
+Philippines,South Korea,0.237
+Philippines,France,0.397
+Philippines,Japan,0.529
+Philippines,United Kingdom,0.396
+Philippines,Turkiye,0.467
+Philippines,Italy,0.51
+Philippines,Brazil,0.511
+Philippines,Germany,0.422
+Philippines,Indonesia,0.511
+Philippines,Pakistan,0.319
+Philippines,Israel,0.356
+Philippines,Iran,0.326
+Philippines,Australia,0.555
+Philippines,Spain,0.561
+Philippines,Egypt,0.432
+Philippines,Ukraine,0.572
+Philippines,Poland,0.659
+Philippines,Taiwan,0.425
+Philippines,Vietnam,0.156
+Philippines,Thailand,0.507
+Philippines,Saudi Arabia,0.581
+Philippines,Sweden,0.57
+Philippines,Algeria,0.589
+Philippines,Canada,0.544
+Philippines,Singapore,0.54
+Philippines,Greece,0.58
+Philippines,North Korea,0.372
+Philippines,Argentina,0.598
+Philippines,Nigeria,0.556
+Philippines,Netherlands,0.56
+Philippines,Myanmar,0.52
+Philippines,Mexico,0.599
+Philippines,Bangladesh,0.638
+Philippines,Portugal,0.613
+Philippines,Norway,0.538
+Philippines,South Africa,0.621
+Philippines,Malaysia,0.601
+Philippines,Colombia,0.527
+Philippines,Iraq,0.407
+Philippines,Denmark,0.594
+Philippines,Switzerland,0.532
+Philippines,Ethiopia,0.482
+Philippines,Finland,0.54
+Philippines,Chile,0.621
+Philippines,Peru,0.54
+Malaysia,United States,0.007
+Malaysia,Russia,0.061
+Malaysia,China,0.038
+Malaysia,India,0.142
+Malaysia,South Korea,0.175
+Malaysia,France,0.31
+Malaysia,Japan,0.433
+Malaysia,United Kingdom,0.309
+Malaysia,Turkiye,0.374
+Malaysia,Italy,0.415
+Malaysia,Brazil,0.416
+Malaysia,Germany,0.332
+Malaysia,Indonesia,0.417
+Malaysia,Pakistan,0.242
+Malaysia,Israel,0.274
+Malaysia,Iran,0.247
+Malaysia,Australia,0.455
+Malaysia,Spain,0.466
+Malaysia,Egypt,0.341
+Malaysia,Ukraine,0.466
+Malaysia,Poland,0.569
+Malaysia,Taiwan,0.335
+Malaysia,Vietnam,0.115
+Malaysia,Thailand,0.413
+Malaysia,Saudi Arabia,0.482
+Malaysia,Sweden,0.475
+Malaysia,Algeria,0.495
+Malaysia,Canada,0.448
+Malaysia,Singapore,0.443
+Malaysia,Greece,0.485
+Malaysia,North Korea,0.287
+Malaysia,Argentina,0.503
+Malaysia,Nigeria,0.461
+Malaysia,Netherlands,0.463
+Malaysia,Myanmar,0.426
+Malaysia,Mexico,0.505
+Malaysia,Bangladesh,0.544
+Malaysia,Portugal,0.519
+Malaysia,Norway,0.44
+Malaysia,South Africa,0.526
+Malaysia,Philippines,0.412
+Malaysia,Colombia,0.434
+Malaysia,Iraq,0.318
+Malaysia,Denmark,0.498
+Malaysia,Switzerland,0.436
+Malaysia,Ethiopia,0.388
+Malaysia,Finland,0.445
+Malaysia,Chile,0.527
+Malaysia,Peru,0.446
+Colombia,United States,0.009
+Colombia,Russia,0.078
+Colombia,China,0.049
+Colombia,India,0.177
+Colombia,South Korea,0.222
+Colombia,France,0.376
+Colombia,Japan,0.506
+Colombia,United Kingdom,0.375
+Colombia,Turkiye,0.445
+Colombia,Italy,0.488
+Colombia,Brazil,0.489
+Colombia,Germany,0.4
+Colombia,Indonesia,0.49
+Colombia,Pakistan,0.3
+Colombia,Israel,0.336
+Colombia,Iran,0.306
+Colombia,Australia,0.533
+Colombia,Spain,0.54
+Colombia,Egypt,0.41
+Colombia,Ukraine,0.548
+Colombia,Poland,0.64
+Colombia,Taiwan,0.403
+Colombia,Vietnam,0.145
+Colombia,Thailand,0.486
+Colombia,Saudi Arabia,0.56
+Colombia,Sweden,0.549
+Colombia,Algeria,0.569
+Colombia,Canada,0.523
+Colombia,Singapore,0.518
+Colombia,Greece,0.559
+Colombia,North Korea,0.351
+Colombia,Argentina,0.577
+Colombia,Nigeria,0.535
+Colombia,Netherlands,0.539
+Colombia,Myanmar,0.499
+Colombia,Mexico,0.579
+Colombia,Bangladesh,0.618
+Colombia,Portugal,0.592
+Colombia,Norway,0.515
+Colombia,South Africa,0.6
+Colombia,Philippines,0.484
+Colombia,Malaysia,0.58
+Colombia,Iraq,0.385
+Colombia,Denmark,0.573
+Colombia,Switzerland,0.51
+Colombia,Ethiopia,0.46
+Colombia,Finland,0.519
+Colombia,Chile,0.6
+Colombia,Peru,0.519
+Iraq,United States,0.012
+Iraq,Russia,0.113
+Iraq,China,0.071
+Iraq,India,0.255
+Iraq,South Korea,0.318
+Iraq,France,0.497
+Iraq,Japan,0.628
+Iraq,United Kingdom,0.496
+Iraq,Turkiye,0.566
+Iraq,Italy,0.61
+Iraq,Brazil,0.61
+Iraq,Germany,0.522
+Iraq,Indonesia,0.61
+Iraq,Pakistan,0.412
+Iraq,Israel,0.453
+Iraq,Iran,0.42
+Iraq,Australia,0.651
+Iraq,Spain,0.657
+Iraq,Egypt,0.529
+Iraq,Ukraine,0.671
+Iraq,Poland,0.745
+Iraq,Taiwan,0.523
+Iraq,Vietnam,0.217
+Iraq,Thailand,0.606
+Iraq,Saudi Arabia,0.675
+Iraq,Sweden,0.665
+Iraq,Algeria,0.684
+Iraq,Canada,0.641
+Iraq,Singapore,0.637
+Iraq,Greece,0.674
+Iraq,North Korea,0.47
+Iraq,Argentina,0.692
+Iraq,Nigeria,0.653
+Iraq,Netherlands,0.655
+Iraq,Myanmar,0.619
+Iraq,Mexico,0.693
+Iraq,Bangladesh,0.728
+Iraq,Portugal,0.706
+Iraq,Norway,0.635
+Iraq,South Africa,0.713
+Iraq,Philippines,0.605
+Iraq,Malaysia,0.695
+Iraq,Colombia,0.625
+Iraq,Denmark,0.687
+Iraq,Switzerland,0.63
+Iraq,Ethiopia,0.582
+Iraq,Finland,0.637
+Iraq,Chile,0.712
+Iraq,Peru,0.638
+Denmark,United States,0.007
+Denmark,Russia,0.064
+Denmark,China,0.039
+Denmark,India,0.146
+Denmark,South Korea,0.18
+Denmark,France,0.318
+Denmark,Japan,0.442
+Denmark,United Kingdom,0.317
+Denmark,Turkiye,0.382
+Denmark,Italy,0.424
+Denmark,Brazil,0.425
+Denmark,Germany,0.34
+Denmark,Indonesia,0.426
+Denmark,Pakistan,0.249
+Denmark,Israel,0.281
+Denmark,Iran,0.254
+Denmark,Australia,0.464
+Denmark,Spain,0.475
+Denmark,Egypt,0.349
+Denmark,Ukraine,0.477
+Denmark,Poland,0.576
+Denmark,Taiwan,0.343
+Denmark,Vietnam,0.119
+Denmark,Thailand,0.422
+Denmark,Saudi Arabia,0.492
+Denmark,Sweden,0.483
+Denmark,Algeria,0.501
+Denmark,Canada,0.457
+Denmark,Singapore,0.452
+Denmark,Greece,0.493
+Denmark,North Korea,0.295
+Denmark,Argentina,0.51
+Denmark,Nigeria,0.468
+Denmark,Netherlands,0.472
+Denmark,Myanmar,0.435
+Denmark,Mexico,0.512
+Denmark,Bangladesh,0.551
+Denmark,Portugal,0.525
+Denmark,Norway,0.45
+Denmark,South Africa,0.533
+Denmark,Philippines,0.421
+Denmark,Malaysia,0.513
+Denmark,Colombia,0.443
+Denmark,Iraq,0.327
+Denmark,Switzerland,0.445
+Denmark,Ethiopia,0.397
+Denmark,Finland,0.455
+Denmark,Chile,0.533
+Denmark,Peru,0.455
+Switzerland,United States,0.009
+Switzerland,Russia,0.078
+Switzerland,China,0.049
+Switzerland,India,0.177
+Switzerland,South Korea,0.22
+Switzerland,France,0.373
+Switzerland,Japan,0.503
+Switzerland,United Kingdom,0.373
+Switzerland,Turkiye,0.442
+Switzerland,Italy,0.485
+Switzerland,Brazil,0.485
+Switzerland,Germany,0.397
+Switzerland,Indonesia,0.485
+Switzerland,Pakistan,0.298
+Switzerland,Israel,0.333
+Switzerland,Iran,0.304
+Switzerland,Australia,0.529
+Switzerland,Spain,0.535
+Switzerland,Egypt,0.407
+Switzerland,Ukraine,0.547
+Switzerland,Poland,0.636
+Switzerland,Taiwan,0.401
+Switzerland,Vietnam,0.145
+Switzerland,Thailand,0.481
+Switzerland,Saudi Arabia,0.555
+Switzerland,Sweden,0.544
+Switzerland,Algeria,0.564
+Switzerland,Canada,0.518
+Switzerland,Singapore,0.513
+Switzerland,Greece,0.554
+Switzerland,North Korea,0.349
+Switzerland,Argentina,0.573
+Switzerland,Nigeria,0.53
+Switzerland,Netherlands,0.534
+Switzerland,Myanmar,0.494
+Switzerland,Mexico,0.574
+Switzerland,Bangladesh,0.614
+Switzerland,Portugal,0.588
+Switzerland,Norway,0.512
+Switzerland,South Africa,0.596
+Switzerland,Philippines,0.48
+Switzerland,Malaysia,0.576
+Switzerland,Colombia,0.501
+Switzerland,Iraq,0.383
+Switzerland,Denmark,0.568
+Switzerland,Ethiopia,0.456
+Switzerland,Finland,0.514
+Switzerland,Chile,0.596
+Switzerland,Peru,0.514
+Ethiopia,United States,0.01
+Ethiopia,Russia,0.089
+Ethiopia,China,0.055
+Ethiopia,India,0.201
+Ethiopia,South Korea,0.256
+Ethiopia,France,0.421
+Ethiopia,Japan,0.554
+Ethiopia,United Kingdom,0.42
+Ethiopia,Turkiye,0.492
+Ethiopia,Italy,0.535
+Ethiopia,Brazil,0.536
+Ethiopia,Germany,0.446
+Ethiopia,Indonesia,0.535
+Ethiopia,Pakistan,0.341
+Ethiopia,Israel,0.379
+Ethiopia,Iran,0.348
+Ethiopia,Australia,0.579
+Ethiopia,Spain,0.585
+Ethiopia,Egypt,0.456
+Ethiopia,Ukraine,0.598
+Ethiopia,Poland,0.681
+Ethiopia,Taiwan,0.449
+Ethiopia,Vietnam,0.17
+Ethiopia,Thailand,0.531
+Ethiopia,Saudi Arabia,0.605
+Ethiopia,Sweden,0.594
+Ethiopia,Algeria,0.613
+Ethiopia,Canada,0.568
+Ethiopia,Singapore,0.564
+Ethiopia,Greece,0.604
+Ethiopia,North Korea,0.395
+Ethiopia,Argentina,0.621
+Ethiopia,Nigeria,0.58
+Ethiopia,Netherlands,0.584
+Ethiopia,Myanmar,0.545
+Ethiopia,Mexico,0.623
+Ethiopia,Bangladesh,0.66
+Ethiopia,Portugal,0.635
+Ethiopia,Norway,0.562
+Ethiopia,South Africa,0.643
+Ethiopia,Philippines,0.531
+Ethiopia,Malaysia,0.624
+Ethiopia,Colombia,0.552
+Ethiopia,Iraq,0.431
+Ethiopia,Denmark,0.617
+Ethiopia,Switzerland,0.557
+Ethiopia,Finland,0.565
+Ethiopia,Chile,0.643
+Ethiopia,Peru,0.565
+Finland,United States,0.008
+Finland,Russia,0.076
+Finland,China,0.047
+Finland,India,0.172
+Finland,South Korea,0.213
+Finland,France,0.365
+Finland,Japan,0.494
+Finland,United Kingdom,0.364
+Finland,Turkiye,0.433
+Finland,Italy,0.476
+Finland,Brazil,0.477
+Finland,Germany,0.388
+Finland,Indonesia,0.478
+Finland,Pakistan,0.29
+Finland,Israel,0.325
+Finland,Iran,0.296
+Finland,Australia,0.52
+Finland,Spain,0.527
+Finland,Egypt,0.398
+Finland,Ukraine,0.536
+Finland,Poland,0.628
+Finland,Taiwan,0.392
+Finland,Vietnam,0.141
+Finland,Thailand,0.474
+Finland,Saudi Arabia,0.547
+Finland,Sweden,0.536
+Finland,Algeria,0.556
+Finland,Canada,0.51
+Finland,Singapore,0.505
+Finland,Greece,0.547
+Finland,North Korea,0.34
+Finland,Argentina,0.564
+Finland,Nigeria,0.522
+Finland,Netherlands,0.526
+Finland,Myanmar,0.486
+Finland,Mexico,0.566
+Finland,Bangladesh,0.605
+Finland,Portugal,0.579
+Finland,Norway,0.502
+Finland,South Africa,0.588
+Finland,Philippines,0.472
+Finland,Malaysia,0.567
+Finland,Colombia,0.493
+Finland,Iraq,0.374
+Finland,Denmark,0.56
+Finland,Switzerland,0.497
+Finland,Ethiopia,0.448
+Finland,Chile,0.587
+Finland,Peru,0.506
+Chile,United States,0.007
+Chile,Russia,0.058
+Chile,China,0.036
+Chile,India,0.133
+Chile,South Korea,0.163
+Chile,France,0.292
+Chile,Japan,0.412
+Chile,United Kingdom,0.291
+Chile,Turkiye,0.354
+Chile,Italy,0.395
+Chile,Brazil,0.396
+Chile,Germany,0.313
+Chile,Indonesia,0.397
+Chile,Pakistan,0.227
+Chile,Israel,0.257
+Chile,Iran,0.232
+Chile,Australia,0.434
+Chile,Spain,0.445
+Chile,Egypt,0.322
+Chile,Ukraine,0.443
+Chile,Poland,0.549
+Chile,Taiwan,0.316
+Chile,Vietnam,0.108
+Chile,Thailand,0.393
+Chile,Saudi Arabia,0.461
+Chile,Sweden,0.454
+Chile,Algeria,0.475
+Chile,Canada,0.428
+Chile,Singapore,0.422
+Chile,Greece,0.464
+Chile,North Korea,0.27
+Chile,Argentina,0.483
+Chile,Nigeria,0.44
+Chile,Netherlands,0.442
+Chile,Myanmar,0.405
+Chile,Mexico,0.485
+Chile,Bangladesh,0.524
+Chile,Portugal,0.498
+Chile,Norway,0.42
+Chile,South Africa,0.506
+Chile,Philippines,0.392
+Chile,Malaysia,0.485
+Chile,Colombia,0.413
+Chile,Iraq,0.3
+Chile,Denmark,0.477
+Chile,Switzerland,0.416
+Chile,Ethiopia,0.368
+Chile,Finland,0.425
+Chile,Peru,0.426
+Peru,United States,0.008
+Peru,Russia,0.074
+Peru,China,0.046
+Peru,India,0.169
+Peru,South Korea,0.213
+Peru,France,0.364
+Peru,Japan,0.493
+Peru,United Kingdom,0.363
+Peru,Turkiye,0.432
+Peru,Italy,0.475
+Peru,Brazil,0.476
+Peru,Germany,0.388
+Peru,Indonesia,0.477
+Peru,Pakistan,0.289
+Peru,Israel,0.324
+Peru,Iran,0.295
+Peru,Australia,0.518
+Peru,Spain,0.527
+Peru,Egypt,0.398
+Peru,Ukraine,0.534
+Peru,Poland,0.628
+Peru,Taiwan,0.391
+Peru,Vietnam,0.139
+Peru,Thailand,0.473
+Peru,Saudi Arabia,0.547
+Peru,Sweden,0.536
+Peru,Algeria,0.556
+Peru,Canada,0.509
+Peru,Singapore,0.504
+Peru,Greece,0.546
+Peru,North Korea,0.339
+Peru,Argentina,0.564
+Peru,Nigeria,0.521
+Peru,Netherlands,0.525
+Peru,Myanmar,0.486
+Peru,Mexico,0.566
+Peru,Bangladesh,0.604
+Peru,Portugal,0.579
+Peru,Norway,0.501
+Peru,South Africa,0.587
+Peru,Philippines,0.472
+Peru,Malaysia,0.567
+Peru,Colombia,0.493
+Peru,Iraq,0.373
+Peru,Denmark,0.56
+Peru,Switzerland,0.497
+Peru,Ethiopia,0.447
+Peru,Finland,0.506
+Peru,Chile,0.587

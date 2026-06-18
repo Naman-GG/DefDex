@@ -5,7 +5,7 @@
 
 ---
 
-## Project Status — Stage 6 of 10 ✅
+## Project Status — Stage 7 of 10 ✅
 
 | Phase | Status |
 |---|---|
@@ -15,8 +15,8 @@
 | Feature Engineering — 6 domain vectors | ✅ Complete |
 | Training set — 50-country universe (X, y) | ✅ Complete |
 | Capability scorer (XGBoost + SHAP) | ✅ Complete |
-| War-outcome predictor (LogReg + MLP) | 🔄 Up next |
-| Gap Analyzer & Recommendations Engine | ⏳ Pending |
+| Win-probability model (LogReg + MLP) | ✅ Complete |
+| Gap Analyzer & Recommendations Engine | 🔄 Up next |
 | Streamlit Dashboard | ⏳ Pending |
 | Polish & Deployment | ⏳ Pending |
 
@@ -86,7 +86,8 @@ DefDex/
 │   └── processed/                  # ML-ready feature matrix (Stage 5)
 │       ├── features.csv            # 50 countries x 45 features + target, 6 domains
 │       ├── feature_dictionary.csv  # feature/domain/source/description map
-│       └── capability_scores.csv   # predicted scores + per-domain SHAP (Stage 6)
+│       ├── capability_scores.csv   # predicted scores + per-domain SHAP (Stage 6)
+│       └── win_probabilities.csv   # P(A beats B) for all 50x50 matchups (Stage 7)
 ├── notebooks/
 │   ├── 01_eda.ipynb                # Exploratory data analysis
 │   ├── defense_spend_trend.png     # China vs India vs Pakistan absolute spend
@@ -99,7 +100,10 @@ DefDex/
 │   ├── train_capability_scorer.py  # XGBoost scorer + SHAP (Stage 6)
 │   ├── capability_scorer.pkl       # trained model + metadata
 │   ├── shap_summary.png            # global SHAP beeswarm
-│   └── shap_domain_contributions.png # domain drivers: India/China/Pakistan
+│   ├── shap_domain_contributions.png # domain drivers: India/China/Pakistan
+│   ├── train_win_predictor.py      # LogReg + MLP win-probability (Stage 7)
+│   ├── win_predictor.pkl           # trained ensemble + combat-power weights
+│   └── win_probability_india.png   # India vs China / Pakistan win odds
 ├── pipeline/
 │   ├── collect_gfp.py              # Scrapes GFP listing pages → 50 countries
 │   └── build_features.py           # Raw data → 6-domain feature matrix + target
@@ -119,8 +123,8 @@ Stage 3  ✅  UCDP + World Bank data, EDA notebook, visualizations
 Stage 4  ✅  Feature engineering — 6 domain vectors
 Stage 5  ✅  Expanded to top-50 countries; training set (X, y) with GFP power index as target
 Stage 6  ✅  XGBoost capability scorer (CV R²=0.74) + SHAP domain attributions
-Stage 7  🔄  War outcome predictor (LogReg + MLP ensemble)
-Stage 8       Gap analyzer — KMeans + recommendations engine
+Stage 7  ✅  Win-probability model (LogReg + MLP) — capability-advantage, calibrated
+Stage 8  🔄  Gap analyzer — KMeans + recommendations engine
 Stage 9       Streamlit dashboard — radar chart + win probability
 Stage 10      Polish, documentation, GitHub publish
 ```
@@ -162,7 +166,15 @@ milenv/bin/python pipeline/collect_gfp.py            # scrape GFP (50 countries)
 milenv/bin/python src/fetch_worldbank.py             # World Bank indicators
 milenv/bin/python pipeline/build_features.py         # build feature matrix
 milenv/bin/python model/train_capability_scorer.py   # train scorer + SHAP
+milenv/bin/python model/train_win_predictor.py       # train win-probability model
 ```
+
+> **Note on the win-probability model:** It is a *capability-advantage* model — it
+> quantifies the measured force-balance gap as a calibrated probability. An earlier
+> experiment training on real historical outcomes (Correlates of War) found current
+> capability differences do **not** predict who actually wins wars (CV AUC ≈ 0.5;
+> terrain, strategy, alliances and resolve dominate), so the model answers the
+> well-posed question instead of overclaiming a forecast.
 
 ---
 
