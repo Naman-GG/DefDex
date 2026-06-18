@@ -5,7 +5,7 @@
 
 ---
 
-## Project Status — Stage 5 of 10 ✅
+## Project Status — Stage 6 of 10 ✅
 
 | Phase | Status |
 |---|---|
@@ -14,7 +14,8 @@
 | Exploratory Data Analysis | ✅ Complete |
 | Feature Engineering — 6 domain vectors | ✅ Complete |
 | Training set — 50-country universe (X, y) | ✅ Complete |
-| ML Models (XGBoost, LogReg, MLP) | 🔄 Up next |
+| Capability scorer (XGBoost + SHAP) | ✅ Complete |
+| War-outcome predictor (LogReg + MLP) | 🔄 Up next |
 | Gap Analyzer & Recommendations Engine | ⏳ Pending |
 | Streamlit Dashboard | ⏳ Pending |
 | Polish & Deployment | ⏳ Pending |
@@ -84,7 +85,8 @@ DefDex/
 │   │   └── worldbank_indicators.csv
 │   └── processed/                  # ML-ready feature matrix (Stage 5)
 │       ├── features.csv            # 50 countries x 45 features + target, 6 domains
-│       └── feature_dictionary.csv  # feature/domain/source/description map
+│       ├── feature_dictionary.csv  # feature/domain/source/description map
+│       └── capability_scores.csv   # predicted scores + per-domain SHAP (Stage 6)
 ├── notebooks/
 │   ├── 01_eda.ipynb                # Exploratory data analysis
 │   ├── defense_spend_trend.png     # China vs India vs Pakistan absolute spend
@@ -93,7 +95,11 @@ DefDex/
 │   ├── data_fetcher.py             # World Bank API (original 3-country)
 │   ├── fetch_worldbank.py          # World Bank API — 50-country universe
 │   └── scrapers.py                 # GFP scraper prototype
-├── model/                          # Trained models (Stage 6+)
+├── model/
+│   ├── train_capability_scorer.py  # XGBoost scorer + SHAP (Stage 6)
+│   ├── capability_scorer.pkl       # trained model + metadata
+│   ├── shap_summary.png            # global SHAP beeswarm
+│   └── shap_domain_contributions.png # domain drivers: India/China/Pakistan
 ├── pipeline/
 │   ├── collect_gfp.py              # Scrapes GFP listing pages → 50 countries
 │   └── build_features.py           # Raw data → 6-domain feature matrix + target
@@ -112,8 +118,8 @@ Stage 2  ✅  SIPRI, GFP, arms transfer data collected
 Stage 3  ✅  UCDP + World Bank data, EDA notebook, visualizations
 Stage 4  ✅  Feature engineering — 6 domain vectors
 Stage 5  ✅  Expanded to top-50 countries; training set (X, y) with GFP power index as target
-Stage 6  🔄  XGBoost capability scorer + SHAP explainability
-Stage 7       War outcome predictor (LogReg + MLP ensemble)
+Stage 6  ✅  XGBoost capability scorer (CV R²=0.74) + SHAP domain attributions
+Stage 7  🔄  War outcome predictor (LogReg + MLP ensemble)
 Stage 8       Gap analyzer — KMeans + recommendations engine
 Stage 9       Streamlit dashboard — radar chart + win probability
 Stage 10      Polish, documentation, GitHub publish
@@ -144,6 +150,18 @@ cd DefDex
 python3 -m venv milenv
 source milenv/bin/activate
 pip install -r requirements.txt
+
+# macOS only: XGBoost needs the OpenMP runtime
+brew install libomp
+```
+
+## Reproducing the pipeline
+
+```bash
+milenv/bin/python pipeline/collect_gfp.py            # scrape GFP (50 countries)
+milenv/bin/python src/fetch_worldbank.py             # World Bank indicators
+milenv/bin/python pipeline/build_features.py         # build feature matrix
+milenv/bin/python model/train_capability_scorer.py   # train scorer + SHAP
 ```
 
 ---
