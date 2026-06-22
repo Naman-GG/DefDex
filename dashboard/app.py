@@ -274,14 +274,16 @@ countries = sorted(feats.index)
 st.sidebar.title("DefDex")
 st.sidebar.caption("Military capability comparison & analysis")
 
-a = st.sidebar.selectbox("Country A", countries, index=countries.index("India"))
-b = st.sidebar.selectbox("Country B", countries, index=countries.index("China"))
+a = st.sidebar.selectbox("Country A", countries, index=None,
+                         placeholder="Choose a country…")
+b = st.sidebar.selectbox("Country B", countries, index=None,
+                         placeholder="Choose a country…")
 section = st.sidebar.radio(
     "Section",
     ["Overview", "Capability Radar", "Service Branches", "Win Probability",
      "Gap & Recommendations", "Capability Clusters"],
 )
-if a == b:
+if a and b and a == b:
     st.sidebar.warning("Pick two different countries.")
 
 st.sidebar.markdown("---")
@@ -549,6 +551,44 @@ def section_clusters() -> None:
                 + ("…" if len(peers) > 12 else ""))
 
 
+def section_home() -> None:
+    st.title("DefDex")
+    st.markdown("##### Military capability intelligence for the world's top 50 armed forces")
+    st.write(
+        "DefDex quantifies and compares national military power across six domains — "
+        "weaponry, manpower, economic resilience, geopolitics, terrain and conflict "
+        "experience — from real open-source data (GFP, World Bank, UCDP, SIPRI) using "
+        "machine-learning models."
+    )
+    st.info("Select **Country A** and **Country B** in the sidebar to begin a comparison.")
+
+    st.subheader("What you can explore")
+    cards = [
+        ("Overview", "Headline scores, global rank, and where two countries stand among all 50."),
+        ("Capability Radar", "Six-domain capability profile compared side by side."),
+        ("Service Branches", "Air Force, Navy and Army compared platform-by-platform."),
+        ("Win Probability", "Calibrated force-balance advantage for any matchup (LogReg + MLP)."),
+        ("Gap & Recommendations", "Where one country trails, with ranked, data-grounded priorities."),
+        ("Capability Clusters", "KMeans tiers showing each country's peer group."),
+    ]
+    cols = st.columns(3)
+    for i, (title, desc) in enumerate(cards):
+        with cols[i % 3]:
+            st.markdown(f"**{title}**")
+            st.caption(desc)
+
+    st.divider()
+    st.subheader("Top 15 by overall capability")
+    ss = feats["strength_score"].sort_values(ascending=False).head(15).sort_values()
+    fig = go.Figure(go.Bar(
+        x=ss.values, y=ss.index, orientation="h", marker_color=OLIVE_DRAB,
+        text=[f"{v:.2f}" for v in ss.values], textposition="auto"))
+    fig.update_xaxes(range=[0, 1], gridcolor="#C9D2B6", zerolinecolor="#9AA882")
+    fig.update_layout(xaxis_title="Strength score (0–1)")
+    st.plotly_chart(style_fig(fig, 480), width="stretch")
+    st.caption("Data: GFP · World Bank · UCDP · SIPRI")
+
+
 SECTIONS = {
     "Overview": section_overview,
     "Capability Radar": section_radar,
@@ -557,4 +597,8 @@ SECTIONS = {
     "Gap & Recommendations": section_gap,
     "Capability Clusters": section_clusters,
 }
-SECTIONS[section]()
+
+if a and b and a != b:
+    SECTIONS[section]()
+else:
+    section_home()
