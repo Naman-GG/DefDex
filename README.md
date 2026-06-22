@@ -5,7 +5,7 @@
 
 ---
 
-## Project Status — Stage 7 of 10 ✅
+## Project Status — Stage 8 of 10 ✅
 
 | Phase | Status |
 |---|---|
@@ -16,7 +16,8 @@
 | Training set — 50-country universe (X, y) | ✅ Complete |
 | Capability scorer (XGBoost + SHAP) | ✅ Complete |
 | Win-probability model (LogReg + MLP) | ✅ Complete |
-| Gap Analyzer & Recommendations Engine | 🔄 Up next |
+| Gap Analyzer & Recommendations Engine | ✅ Complete |
+| Streamlit Dashboard | 🔄 Up next |
 | Streamlit Dashboard | ⏳ Pending |
 | Polish & Deployment | ⏳ Pending |
 
@@ -87,7 +88,10 @@ DefDex/
 │       ├── features.csv            # 50 countries x 45 features + target, 6 domains
 │       ├── feature_dictionary.csv  # feature/domain/source/description map
 │       ├── capability_scores.csv   # predicted scores + per-domain SHAP (Stage 6)
-│       └── win_probabilities.csv   # P(A beats B) for all 50x50 matchups (Stage 7)
+│       ├── win_probabilities.csv   # P(A beats B) for all 50x50 matchups (Stage 7)
+│       ├── country_clusters.csv    # capability tiers via KMeans (Stage 8)
+│       ├── india_gap_analysis.csv  # India vs China per-domain gap (Stage 8)
+│       └── recommendations.csv     # ranked, data-grounded recommendations (Stage 8)
 ├── notebooks/
 │   ├── 01_eda.ipynb                # Exploratory data analysis
 │   ├── defense_spend_trend.png     # China vs India vs Pakistan absolute spend
@@ -106,7 +110,8 @@ DefDex/
 │   └── win_probability_india.png   # India vs China / Pakistan win odds
 ├── pipeline/
 │   ├── collect_gfp.py              # Scrapes GFP listing pages → 50 countries
-│   └── build_features.py           # Raw data → 6-domain feature matrix + target
+│   ├── build_features.py           # Raw data → 6-domain feature matrix + target
+│   └── gap_analyzer.py             # KMeans tiers + recommendations (Stage 8)
 ├── dashboard/                      # Streamlit app (Stage 9+)
 ├── requirements.txt
 └── README.md
@@ -124,8 +129,8 @@ Stage 4  ✅  Feature engineering — 6 domain vectors
 Stage 5  ✅  Expanded to top-50 countries; training set (X, y) with GFP power index as target
 Stage 6  ✅  XGBoost capability scorer (CV R²=0.74) + SHAP domain attributions
 Stage 7  ✅  Win-probability model (LogReg + MLP) — capability-advantage, calibrated
-Stage 8  🔄  Gap analyzer — KMeans + recommendations engine
-Stage 9       Streamlit dashboard — radar chart + win probability
+Stage 8  ✅  Gap analyzer — KMeans tiers + ranked recommendations for India
+Stage 9  🔄  Streamlit dashboard — radar chart + win probability
 Stage 10      Polish, documentation, GitHub publish
 ```
 

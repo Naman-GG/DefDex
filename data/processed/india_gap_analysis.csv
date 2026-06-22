@@ -1,0 +1,7 @@
+domain,feature,india,china,disadvantage
+weaponry,weaponry_index,0.2701,0.647,0.3769
+economic_resilience,economic_resilience_index,0.1984,0.4783,0.2799
+import_dependency,import_dependency_index,0.2227,0.013,0.2097
+defense_industry,defense_industry_index,0.0019,0.0837,0.0818
+manpower,manpower_index,0.3456,0.319,-0.0266
+conflict_experience,conflict_experience_index,0.8185,0.5802,-0.2383

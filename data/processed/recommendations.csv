@@ -1,0 +1,5 @@
+rank,domain,disadvantage,recommendation,specific_targets
+1,weaponry,0.3769,Modernize and expand the force — prioritize the platforms below where India trails most.,"self_propelled_artillery: India 100.00 vs China 2,940; submarines: India 18.00 vs China 61.00; frigates: India 18.00 vs China 46.00"
+2,economic_resilience,0.2799,"Broaden the economic/industrial base funding defense (GDP growth, budget, energy reserves).","gdp_current_usd: India 3910B vs China 18744B; defense_budget_usd: India 109B vs China 303B; oil_production_bpd: India 822,000 vs China 5.0M"
+3,import_dependency,0.2097,Cut reliance on foreign arms suppliers by substituting imports with domestic production.,arms_imports_tiv: India 1B vs China 72.0M (India higher = more dependent)
+4,defense_industry,0.0818,Scale domestic defense manufacturing and arms exports to build an indigenous industry.,arms_exports_tiv: India 25.0M vs China 1B
