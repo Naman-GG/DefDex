@@ -19,6 +19,9 @@ Design notes:
 - Win probability is computed LIVE from model/win_predictor.pkl (sklearn
   LogReg + MLP) so any A-vs-B pair works — and there is no xgboost/libomp
   runtime dependency, keeping Streamlit Cloud deploys simple.
+- The Gap section can render an optional AI strategic narrative via xAI Grok
+  (set XAI_API_KEY as an env var locally or a Streamlit secret on deploy);
+  it falls back to a deterministic template narrative when unavailable.
 
 Run:
     streamlit run dashboard/app.py
@@ -26,12 +29,14 @@ Run:
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 import joblib
 import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
+import requests
 import streamlit as st
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
@@ -188,6 +193,59 @@ def load_win_model() -> dict:
     return joblib.load(MODEL_DIR / "win_predictor.pkl")
 
 
+# --- Optional AI narrative (xAI Grok, OpenAI-compatible REST) ---------------
+XAI_URL = os.environ.get("XAI_BASE_URL", "https://api.x.ai/v1").rstrip("/") + "/chat/completions"
+
+
+def get_xai_key() -> str | None:
+    """API key from Streamlit secrets (cloud deploy) or env var (local)."""
+    try:
+        if "XAI_API_KEY" in st.secrets:
+            return st.secrets["XAI_API_KEY"]
+    except Exception:
+        pass
+    return os.environ.get("XAI_API_KEY")
+
+
+@st.cache_data(show_spinner=False)
+def grok_narrative(model: str, facts: str) -> str | None:
+    """Grounded strategic narrative via Grok; None on any failure (-> template)."""
+    key = get_xai_key()
+    if not key:
+        return None
+    payload = {
+        "model": model, "temperature": 0.3, "stream": False,
+        "messages": [
+            {"role": "system", "content":
+                "You are a concise defense analyst. Use ONLY the facts provided; never "
+                "invent numbers. Write 3-4 sentences for a policy briefing, no preamble."},
+            {"role": "user", "content": facts},
+        ],
+    }
+    try:
+        r = requests.post(XAI_URL, json=payload,
+                          headers={"Authorization": f"Bearer {key}"}, timeout=45)
+        if r.status_code == 200:
+            return r.json()["choices"][0]["message"]["content"].strip() or None
+    except Exception:
+        return None
+    return None
+
+
+def template_narrative(subj: str, bench: str, recs: list[dict]) -> str:
+    """Deterministic fallback narrative built from the structured gap data."""
+    sa, sb = feats.loc[subj, "strength_score"], feats.loc[bench, "strength_score"]
+    rank = int(feats["strength_score"].rank(ascending=False)[subj])
+    verb = "leads" if sa >= sb else "trails"
+    if not recs:
+        return (f"**{subj}** (strength {sa:.2f}, global rank #{rank}) {verb} **{bench}** "
+                f"(strength {sb:.2f}) with no material capability shortfalls across the six domains.")
+    gaps = ", ".join(f"{r['domain'].lower()} (gap {r['disadvantage']:.2f})" for r in recs[:3])
+    return (f"**{subj}** (strength {sa:.2f}, global rank #{rank}) {verb} **{bench}** "
+            f"(strength {sb:.2f}). The most significant capability gaps are {gaps}. "
+            f"Priority focus: {recs[0]['recommendation'].lower()}")
+
+
 def radar_values(feats: pd.DataFrame, country: str) -> list[float]:
     r = feats.loc[country]
     return [
@@ -225,6 +283,15 @@ section = st.sidebar.radio(
 )
 if a == b:
     st.sidebar.warning("Pick two different countries.")
+
+st.sidebar.markdown("---")
+ai_enabled = st.sidebar.toggle(
+    "AI narrative (Grok)", value=False,
+    help="Uses xAI Grok when XAI_API_KEY is set (env var locally, or Streamlit "
+         "secret on deploy). Falls back to a template narrative otherwise.")
+ai_model = (st.sidebar.text_input("Grok model", value=os.environ.get("XAI_MODEL", "grok-3"))
+            if ai_enabled else "grok-3")
+
 st.sidebar.markdown("---")
 st.sidebar.caption("Data: GFP · World Bank · UCDP · SIPRI")
 
@@ -373,8 +440,37 @@ def section_gap() -> None:
     fig.update_layout(xaxis_title=f"{a}'s disadvantage vs {b}  (right = {a} behind)")
     st.plotly_chart(style_fig(fig, 380), width="stretch")
 
-    st.subheader(f"Ranked recommendations for {a}")
     recs = build_recommendations(a, b)
+
+    # --- Strategic narrative (Grok if enabled & available, else template) ----
+    st.subheader("Strategic narrative")
+    wp = win_probability(load_win_model(), feats, a, b)["ensemble"]
+    rank = int(feats["strength_score"].rank(ascending=False)[a])
+    gaps_txt = " | ".join(
+        f"{r['domain']} (gap {r['disadvantage']:.2f}; {r['targets']})" for r in recs[:4]
+    ) or "no material gaps"
+    facts = (
+        f"Compare {a} vs {b}. Strength scores (0-1): {a} {feats.loc[a,'strength_score']:.3f}, "
+        f"{b} {feats.loc[b,'strength_score']:.3f}. {a} global capability rank #{rank}/50. "
+        f"Capability-advantage win probability that {a} prevails: {wp:.0%} (not a real-war forecast). "
+        f"{a}'s capability gaps vs {b}: {gaps_txt}. "
+        f"Recommended priorities: " + "; ".join(r["recommendation"] for r in recs[:4]) + "."
+    )
+    narrative = None
+    if ai_enabled and get_xai_key():
+        with st.spinner("Generating narrative with Grok…"):
+            narrative = grok_narrative(ai_model, facts)
+        if narrative:
+            st.markdown(narrative)
+            st.caption(f"AI-generated · xAI {ai_model}")
+        else:
+            st.caption("Grok unavailable — showing template narrative.")
+    elif ai_enabled:
+        st.caption("No XAI_API_KEY found — showing template narrative.")
+    if not narrative:
+        st.markdown(template_narrative(a, b, recs))
+
+    st.subheader(f"Ranked recommendations for {a}")
     if not recs:
         st.success(f"{a} matches or leads {b} across all six domains — no material shortfalls.")
     for r in recs:
