@@ -72,6 +72,25 @@ BRANCHES = {
     },
 }
 
+# Recommendation templates + granular features to drill into per weak domain.
+REC_TEMPLATES = {
+    "weaponry_index": "Modernize and expand the force — prioritize the platforms below.",
+    "economic_resilience_index": "Broaden the economic and industrial base funding defense (GDP, budget, energy).",
+    "defense_industry_index": "Scale domestic defense manufacturing and arms exports.",
+    "import_dependency_index": "Cut reliance on foreign arms suppliers via domestic production.",
+    "manpower_index": "Sustain personnel readiness and reserve depth.",
+    "conflict_experience_index": "Invest in training and joint exercises to offset combat-experience gaps.",
+}
+GRANULAR = {
+    "weaponry_index": ["total_aircraft", "fighter_aircraft", "attack_aircraft",
+                       "attack_helicopters", "total_helicopters", "total_naval",
+                       "submarines", "aircraft_carriers", "destroyers", "frigates",
+                       "tanks", "self_propelled_artillery", "towed_artillery"],
+    "economic_resilience_index": ["gdp_current_usd", "defense_budget_usd",
+                                  "gdp_per_capita", "oil_production_bpd"],
+    "manpower_index": ["active_personnel", "reserve_personnel", "labor_force"],
+}
+
 # --- Sage / olive palette ---------------------------------------------------
 OLIVE = "#808000"        # buttons / primary accent
 OLIVE_DRAB = "#6B8E23"   # hover / secondary accent / country B series
@@ -162,11 +181,6 @@ def load_scores() -> pd.DataFrame:
 @st.cache_data
 def load_clusters() -> pd.DataFrame:
     return pd.read_csv(PROCESSED / "country_clusters.csv").set_index("country")
-
-
-@st.cache_data
-def load_recommendations() -> pd.DataFrame:
-    return pd.read_csv(PROCESSED / "recommendations.csv")
 
 
 @st.cache_resource
@@ -310,6 +324,39 @@ def section_winprob() -> None:
             "not a forecast. Terrain, strategy, alliances and resolve are not modeled.")
 
 
+def build_recommendations(subj: str, bench: str) -> list[dict]:
+    """Ranked recommendations for `subj` vs `bench`, computed live for any pair."""
+    recs = []
+    for f in DOMAIN_LABELS:
+        s, bb = feats.loc[subj, f], feats.loc[bench, f]
+        disadvantage = (s - bb) if f == "import_dependency_index" else (bb - s)
+        if disadvantage <= 0.02:
+            continue
+        if f == "import_dependency_index":
+            targets = (f"arms_imports_tiv — {subj} {fmt_count(feats.loc[subj, 'arms_imports_tiv'])} "
+                       f"vs {bench} {fmt_count(feats.loc[bench, 'arms_imports_tiv'])} "
+                       f"({subj} more import-dependent)")
+        elif f == "defense_industry_index":
+            targets = (f"arms_exports_tiv — {subj} {fmt_count(feats.loc[subj, 'arms_exports_tiv'])} "
+                       f"vs {bench} {fmt_count(feats.loc[bench, 'arms_exports_tiv'])}")
+        else:
+            cols = GRANULAR.get(f, [])
+            norm = (feats[cols] - feats[cols].min()) / (feats[cols].max() - feats[cols].min()) if cols else None
+            targets = ""
+            if norm is not None:
+                deficit = (norm.loc[bench] - norm.loc[subj]).sort_values(ascending=False)
+                top = [g for g in deficit.index if deficit[g] > 0.05][:3]
+                targets = "; ".join(
+                    f"{g}: {subj} {fmt_count(feats.loc[subj, g])} vs {bench} {fmt_count(feats.loc[bench, g])}"
+                    for g in top)
+        recs.append({"domain": DOMAIN_LABELS[f], "disadvantage": round(disadvantage, 3),
+                     "recommendation": REC_TEMPLATES.get(f, "Address the gap."), "targets": targets})
+    recs.sort(key=lambda r: r["disadvantage"], reverse=True)
+    for i, r in enumerate(recs, 1):
+        r["rank"] = i
+    return recs
+
+
 def section_gap() -> None:
     st.title(f"Gap Analysis — {a} vs {b}")
     rows = []
@@ -326,17 +373,16 @@ def section_gap() -> None:
     fig.update_layout(xaxis_title=f"{a}'s disadvantage vs {b}  (right = {a} behind)")
     st.plotly_chart(style_fig(fig, 380), width="stretch")
 
-    if a == "India" and b == "China":
-        st.subheader("Ranked recommendations for India")
-        for _, r in load_recommendations().iterrows():
-            with st.expander(f"#{int(r['rank'])} · {r['domain'].title()} "
-                             f"(gap {r['disadvantage']:.3f})"):
-                st.write(r["recommendation"])
-                if isinstance(r["specific_targets"], str) and r["specific_targets"]:
-                    st.caption("Specific targets: " + r["specific_targets"])
-    else:
-        st.caption("Ranked recommendations are tuned for the India vs China case "
-                   "(select India / China to view them).")
+    st.subheader(f"Ranked recommendations for {a}")
+    recs = build_recommendations(a, b)
+    if not recs:
+        st.success(f"{a} matches or leads {b} across all six domains — no material shortfalls.")
+    for r in recs:
+        st.markdown(f"**{r['rank']}. {r['domain']}**  ·  gap {r['disadvantage']:.3f}")
+        st.write(r["recommendation"])
+        if r["targets"]:
+            st.caption("Specific targets: " + r["targets"])
+        st.divider()
 
 
 def section_branches() -> None:
