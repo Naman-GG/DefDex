@@ -8,6 +8,7 @@ China / Pakistan story but lets the user compare any two of the 50 countries.
 Sections (sidebar):
     Overview            headline scores, tier, win-probability snapshot
     Capability Radar    six-domain profile, A vs B
+    Service Branches    Air Force / Navy / Army platform-level comparison
     Win Probability     live LogReg + MLP inference for the selected pair
     Gap & Recommendations  per-domain gap + ranked, data-grounded actions
     Capability Clusters interactive PCA map of the KMeans tiers
@@ -52,14 +53,47 @@ DOMAIN_LABELS = {
 RADAR_AXES = ["Weaponry", "Manpower", "Economic Resilience",
               "Conflict Experience", "Defense Industry", "Supply Security"]
 
+# Service-branch breakdown: headline metric + platform-level components.
+BRANCHES = {
+    "Air Force": {
+        "headline": ("total_aircraft", "Total aircraft"),
+        "parts": {"fighter_aircraft": "Fighters", "attack_aircraft": "Attack aircraft",
+                  "attack_helicopters": "Attack helicopters", "total_helicopters": "Helicopters"},
+    },
+    "Navy": {
+        "headline": ("total_naval", "Total naval assets"),
+        "parts": {"submarines": "Submarines", "aircraft_carriers": "Aircraft carriers",
+                  "destroyers": "Destroyers", "frigates": "Frigates"},
+    },
+    "Army": {
+        "headline": ("active_personnel", "Active personnel"),
+        "parts": {"tanks": "Tanks", "self_propelled_artillery": "Self-propelled artillery",
+                  "towed_artillery": "Towed artillery"},
+    },
+}
+
 # --- Sage / olive palette ---------------------------------------------------
 OLIVE = "#808000"        # buttons / primary accent
-OLIVE_DRAB = "#6B8E23"   # hover / secondary accent
-DARK_OLIVE = "#556B2F"   # country A series
-SAGE = "#A3B18A"         # country B series
+OLIVE_DRAB = "#6B8E23"   # hover / secondary accent / country B series
+DARK_OLIVE = "#556B2F"   # deep green series
+SAGE = "#A3B18A"         # light sage series
+CRIMSON = "#C41E3A"      # country A series (high-contrast accent)
 CLAY = "#BC6C25"         # "behind" / shortfall
 INK = "#2F3A2A"          # chart text
 TIER_COLORS = ["#556B2F", "#6B8E23", "#A3B18A", "#C2C5AA", "#8A9A5B", "#DCE2CF"]
+
+
+def fmt_count(v: float) -> str:
+    """Compact human-readable count (1.4M, 4,614, etc.)."""
+    if pd.isna(v):
+        return "n/a"
+    if abs(v) >= 1e9:
+        return f"{v/1e9:.1f}B"
+    if abs(v) >= 1e6:
+        return f"{v/1e6:.2f}M"
+    if abs(v) >= 1000:
+        return f"{v:,.0f}"
+    return f"{v:.0f}"
 
 st.set_page_config(page_title="DefDex", layout="wide")
 
@@ -70,7 +104,7 @@ st.markdown(
     html, body, [class*="css"], .stMarkdown { font-family:'Inter',-apple-system,system-ui,sans-serif; }
 
     h1, h2, h3 { color:#3A4A2F; letter-spacing:-0.4px; font-weight:700; }
-    h1 { border-bottom:3px solid #808000; padding-bottom:8px; display:inline-block; }
+    h1 { border-bottom:2px solid #9AA882; padding-bottom:10px; margin-bottom:1.4rem; }
 
     [data-testid="stMetric"] {
         background:#FFFFFF; border:1px solid #C9D2B6; border-left:4px solid #808000;
@@ -170,7 +204,7 @@ a = st.sidebar.selectbox("Country A", countries, index=countries.index("India"))
 b = st.sidebar.selectbox("Country B", countries, index=countries.index("China"))
 section = st.sidebar.radio(
     "Section",
-    ["Overview", "Capability Radar", "Win Probability",
+    ["Overview", "Capability Radar", "Service Branches", "Win Probability",
      "Gap & Recommendations", "Capability Clusters"],
 )
 if a == b:
@@ -211,12 +245,12 @@ def section_overview() -> None:
 
 def radar_fig() -> go.Figure:
     fig = go.Figure()
-    for country, color in [(a, DARK_OLIVE), (b, SAGE)]:
+    for country, color in [(a, CRIMSON), (b, DARK_OLIVE)]:
         vals = radar_values(feats, country)
         fig.add_trace(go.Scatterpolar(
             r=vals + [vals[0]], theta=RADAR_AXES + [RADAR_AXES[0]],
             fill="toself", name=country, line_color=color,
-            fillcolor=color, opacity=0.45))
+            fillcolor=color, opacity=0.4))
     fig.update_layout(
         polar=dict(bgcolor="rgba(255,255,255,0.5)",
                    radialaxis=dict(visible=True, range=[0, 1], gridcolor="#C9D2B6"),
@@ -289,6 +323,39 @@ def section_gap() -> None:
                    "(select India / China to view them).")
 
 
+def section_branches() -> None:
+    st.title("Service Branch Comparison")
+    st.caption("Air Force, Navy and Army compared platform-by-platform. "
+               "Branch strength is the mean of the components, normalized 0–1 across all 50 countries.")
+    tabs = st.tabs(list(BRANCHES))
+    for tab, (name, spec) in zip(tabs, BRANCHES.items()):
+        with tab:
+            parts = spec["parts"]
+            head_col, head_lbl = spec["headline"]
+            norm = (feats[list(parts)] - feats[list(parts)].min()) / \
+                   (feats[list(parts)].max() - feats[list(parts)].min())
+            idx = norm.mean(axis=1)
+
+            c1, c2, c3 = st.columns(3)
+            c1.metric(f"{a} · {head_lbl}", fmt_count(feats.loc[a, head_col]))
+            c2.metric(f"{b} · {head_lbl}", fmt_count(feats.loc[b, head_col]))
+            lead = a if idx[a] >= idx[b] else b
+            c3.metric(f"{name} strength (0–1)", f"{idx[a]:.2f} vs {idx[b]:.2f}",
+                      delta=f"{lead} leads")
+
+            labels = list(parts.values())
+            fig = go.Figure()
+            for country, color in [(a, CRIMSON), (b, OLIVE_DRAB)]:
+                xs = [feats.loc[country, k] for k in parts]
+                fig.add_trace(go.Bar(
+                    y=labels, x=xs, name=country, orientation="h",
+                    marker_color=color, text=[fmt_count(x) for x in xs],
+                    textposition="auto"))
+            fig.update_xaxes(gridcolor="#C9D2B6", zerolinecolor="#9AA882")
+            fig.update_layout(barmode="group", xaxis_title="Platform count")
+            st.plotly_chart(style_fig(fig, 360), width="stretch")
+
+
 def section_clusters() -> None:
     st.title("Capability Clusters")
     st.caption("KMeans tiers over the six capability domains, projected to 2D via PCA.")
@@ -326,6 +393,7 @@ def section_clusters() -> None:
 SECTIONS = {
     "Overview": section_overview,
     "Capability Radar": section_radar,
+    "Service Branches": section_branches,
     "Win Probability": section_winprob,
     "Gap & Recommendations": section_gap,
     "Capability Clusters": section_clusters,
