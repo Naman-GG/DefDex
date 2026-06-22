@@ -5,7 +5,7 @@
 
 ---
 
-## Project Status — Stage 8 of 10 ✅
+## Project Status — Stage 9 of 10 ✅
 
 | Phase | Status |
 |---|---|
@@ -17,7 +17,8 @@
 | Capability scorer (XGBoost + SHAP) | ✅ Complete |
 | Win-probability model (LogReg + MLP) | ✅ Complete |
 | Gap Analyzer & Recommendations Engine | ✅ Complete |
-| Streamlit Dashboard | 🔄 Up next |
+| Streamlit Dashboard | ✅ Complete |
+| Polish & Deployment | 🔄 Up next |
 | Streamlit Dashboard | ⏳ Pending |
 | Polish & Deployment | ⏳ Pending |
 
@@ -112,7 +113,8 @@ DefDex/
 │   ├── collect_gfp.py              # Scrapes GFP listing pages → 50 countries
 │   ├── build_features.py           # Raw data → 6-domain feature matrix + target
 │   └── gap_analyzer.py             # KMeans tiers + recommendations (Stage 8)
-├── dashboard/                      # Streamlit app (Stage 9+)
+├── dashboard/
+│   └── app.py                      # Streamlit dashboard (Stage 9)
 ├── requirements.txt
 └── README.md
 ```
@@ -130,8 +132,8 @@ Stage 5  ✅  Expanded to top-50 countries; training set (X, y) with GFP power i
 Stage 6  ✅  XGBoost capability scorer (CV R²=0.74) + SHAP domain attributions
 Stage 7  ✅  Win-probability model (LogReg + MLP) — capability-advantage, calibrated
 Stage 8  ✅  Gap analyzer — KMeans tiers + ranked recommendations for India
-Stage 9  🔄  Streamlit dashboard — radar chart + win probability
-Stage 10      Polish, documentation, GitHub publish
+Stage 9  ✅  Streamlit dashboard — radar, live win probability, gap, clusters
+Stage 10  🔄  Polish, documentation, GitHub publish
 ```
 
 ---
@@ -172,7 +174,19 @@ milenv/bin/python src/fetch_worldbank.py             # World Bank indicators
 milenv/bin/python pipeline/build_features.py         # build feature matrix
 milenv/bin/python model/train_capability_scorer.py   # train scorer + SHAP
 milenv/bin/python model/train_win_predictor.py       # train win-probability model
+milenv/bin/python pipeline/gap_analyzer.py           # clusters + recommendations
 ```
+
+## Launch the dashboard
+
+```bash
+milenv/bin/streamlit run dashboard/app.py
+```
+
+Interactive sections: **Overview**, **Capability Radar**, **Win Probability**
+(live LogReg + MLP inference for any pair), **Gap & Recommendations**, and
+**Capability Clusters**. Defaults to India vs China; any two of the 50 countries
+can be compared.
 
 > **Note on the win-probability model:** It is a *capability-advantage* model — it
 > quantifies the measured force-balance gap as a calibrated probability. An earlier
