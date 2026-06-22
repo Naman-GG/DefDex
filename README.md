@@ -1,6 +1,8 @@
 # DefDex 🛡️
 ### A Machine Learning Pipeline for Military Capability Comparison & War Outcome Prediction
 
+**Live demo → [defdex.streamlit.app](https://defdex.streamlit.app/)**
+
 > Comparing India's defense capabilities against its primary adversaries (China & Pakistan) using real open-source data, explainable ML models, and a live Streamlit dashboard.
 
 ---
