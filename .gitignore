@@ -2,6 +2,5 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
-defense_simulator/models/*.pkl
-defense_simulator/models/*.gbtree
-EO
+milenv/
+.streamlit/secrets.toml
