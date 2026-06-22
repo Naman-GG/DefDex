@@ -104,7 +104,9 @@ st.markdown(
     html, body, [class*="css"], .stMarkdown { font-family:'Inter',-apple-system,system-ui,sans-serif; }
 
     h1, h2, h3 { color:#3A4A2F; letter-spacing:-0.4px; font-weight:700; }
-    h1 { border-bottom:2px solid #9AA882; padding-bottom:10px; margin-bottom:1.4rem; }
+    h1 { border-bottom:2px solid #9AA882; padding-bottom:12px; margin-bottom:2.6rem; }
+    /* extra gap so the title rule never crowds the first metric row */
+    [data-testid="stHorizontalBlock"] { margin-top:0.4rem; }
 
     [data-testid="stMetric"] {
         background:#FFFFFF; border:1px solid #C9D2B6; border-left:4px solid #808000;
