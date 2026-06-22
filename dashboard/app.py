@@ -52,7 +52,62 @@ DOMAIN_LABELS = {
 RADAR_AXES = ["Weaponry", "Manpower", "Economic Resilience",
               "Conflict Experience", "Defense Industry", "Supply Security"]
 
-st.set_page_config(page_title="DefDex 🛡️", page_icon="🛡️", layout="wide")
+# --- Sage / olive palette ---------------------------------------------------
+OLIVE = "#808000"        # buttons / primary accent
+OLIVE_DRAB = "#6B8E23"   # hover / secondary accent
+DARK_OLIVE = "#556B2F"   # country A series
+SAGE = "#A3B18A"         # country B series
+CLAY = "#BC6C25"         # "behind" / shortfall
+INK = "#2F3A2A"          # chart text
+TIER_COLORS = ["#556B2F", "#6B8E23", "#A3B18A", "#C2C5AA", "#8A9A5B", "#DCE2CF"]
+
+st.set_page_config(page_title="DefDex", layout="wide")
+
+st.markdown(
+    """
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    html, body, [class*="css"], .stMarkdown { font-family:'Inter',-apple-system,system-ui,sans-serif; }
+
+    h1, h2, h3 { color:#3A4A2F; letter-spacing:-0.4px; font-weight:700; }
+    h1 { border-bottom:3px solid #808000; padding-bottom:8px; display:inline-block; }
+
+    [data-testid="stMetric"] {
+        background:#FFFFFF; border:1px solid #C9D2B6; border-left:4px solid #808000;
+        border-radius:14px; padding:16px 18px; box-shadow:0 1px 3px rgba(85,107,47,0.08);
+    }
+    section[data-testid="stSidebar"] { background:#E2E8D5; border-right:1px solid #C9D2B6; }
+    section[data-testid="stSidebar"] div[role="radiogroup"] > label {
+        background:#F3F5EE; border:1px solid #C9D2B6; border-radius:10px;
+        padding:10px 14px; margin-bottom:8px; width:100%; transition:all .15s ease; cursor:pointer;
+    }
+    section[data-testid="stSidebar"] div[role="radiogroup"] > label:hover {
+        border-color:#808000; background:#EAEFE0;
+    }
+    .stButton>button, .stDownloadButton>button {
+        background:#808000; color:#fff; border:none; border-radius:10px; font-weight:600;
+        padding:8px 18px; transition:all .15s ease;
+    }
+    .stButton>button:hover, .stDownloadButton>button:hover {
+        background:#6B8E23; transform:translateY(-1px);
+    }
+    [data-testid="stExpander"] { border:1px solid #C9D2B6; border-radius:12px; background:#FFFFFF; }
+    [data-testid="stDataFrame"] { border-radius:12px; overflow:hidden; }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+
+def style_fig(fig: go.Figure, height: int) -> go.Figure:
+    """Apply the shared modern, transparent, sage-toned chart styling."""
+    fig.update_layout(
+        height=height, margin=dict(t=40, b=30, l=10, r=10),
+        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color=INK, family="Inter, sans-serif"),
+        legend=dict(bgcolor="rgba(0,0,0,0)", orientation="h", y=-0.15),
+    )
+    return fig
 
 
 # --------------------------------------------------------------------------- #
@@ -108,7 +163,7 @@ def win_probability(model: dict, feats: pd.DataFrame, a: str, b: str) -> dict:
 feats = load_features()
 countries = sorted(feats.index)
 
-st.sidebar.title("DefDex 🛡️")
+st.sidebar.title("DefDex")
 st.sidebar.caption("Military capability comparison & analysis")
 
 a = st.sidebar.selectbox("Country A", countries, index=countries.index("India"))
@@ -148,8 +203,7 @@ def section_overview() -> None:
     st.info(
         "Win probability is a **capability-advantage** measure (calibrated force-balance "
         "gap), not a forecast of actual war outcomes — historical outcomes are not "
-        "predictable from capability alone.",
-        icon="ℹ️",
+        "predictable from capability alone."
     )
     st.subheader("Capability profile")
     st.plotly_chart(radar_fig(), width="stretch")
@@ -157,15 +211,18 @@ def section_overview() -> None:
 
 def radar_fig() -> go.Figure:
     fig = go.Figure()
-    for country, color in [(a, "#c0392b"), (b, "#2980b9")]:
+    for country, color in [(a, DARK_OLIVE), (b, SAGE)]:
         vals = radar_values(feats, country)
         fig.add_trace(go.Scatterpolar(
             r=vals + [vals[0]], theta=RADAR_AXES + [RADAR_AXES[0]],
-            fill="toself", name=country, line_color=color))
+            fill="toself", name=country, line_color=color,
+            fillcolor=color, opacity=0.45))
     fig.update_layout(
-        polar=dict(radialaxis=dict(visible=True, range=[0, 1])),
-        showlegend=True, height=480, margin=dict(t=30, b=30))
-    return fig
+        polar=dict(bgcolor="rgba(255,255,255,0.5)",
+                   radialaxis=dict(visible=True, range=[0, 1], gridcolor="#C9D2B6"),
+                   angularaxis=dict(gridcolor="#C9D2B6")),
+        showlegend=True)
+    return style_fig(fig, 480)
 
 
 def section_radar() -> None:
@@ -188,21 +245,19 @@ def section_winprob() -> None:
         mode="gauge+number", value=win["ensemble"] * 100,
         number={"suffix": "%"}, title={"text": f"P({a} defeats {b})"},
         gauge={"axis": {"range": [0, 100]},
-               "bar": {"color": "#c0392b"},
-               "steps": [{"range": [0, 50], "color": "#f2f2f2"},
-                         {"range": [50, 100], "color": "#e8f5e9"}],
-               "threshold": {"line": {"color": "black", "width": 3},
+               "bar": {"color": OLIVE},
+               "steps": [{"range": [0, 50], "color": "#EAEFE0"},
+                         {"range": [50, 100], "color": "#CBD8B4"}],
+               "threshold": {"line": {"color": INK, "width": 3},
                              "thickness": 0.8, "value": 50}}))
-    g.update_layout(height=360, margin=dict(t=60, b=10))
-    st.plotly_chart(g, width="stretch")
+    st.plotly_chart(style_fig(g, 360), width="stretch")
 
     c1, c2, c3 = st.columns(3)
     c1.metric("Logistic Regression", f"{win['logreg']:.0%}")
     c2.metric("Neural Net (MLP)", f"{win['mlp']:.0%}")
     c3.metric("Ensemble", f"{win['ensemble']:.0%}")
     st.info("Capability-advantage estimate from a doctrine-weighted force balance — "
-            "not a forecast. Terrain, strategy, alliances and resolve are not modeled.",
-            icon="ℹ️")
+            "not a forecast. Terrain, strategy, alliances and resolve are not modeled.")
 
 
 def section_gap() -> None:
@@ -214,12 +269,12 @@ def section_gap() -> None:
         rows.append({"Domain": lbl, a: round(s, 3), b: round(bb, 3),
                      "disadvantage": round(disadvantage, 3)})
     gap = pd.DataFrame(rows).sort_values("disadvantage")
-    colors = ["#27ae60" if v <= 0 else "#c0392b" for v in gap["disadvantage"]]
+    colors = [OLIVE_DRAB if v <= 0 else CLAY for v in gap["disadvantage"]]
     fig = go.Figure(go.Bar(x=gap["disadvantage"], y=gap["Domain"], orientation="h",
                            marker_color=colors))
-    fig.update_layout(height=380, margin=dict(t=20, b=30),
-                      xaxis_title=f"{a}'s disadvantage vs {b}  (right = {a} behind)")
-    st.plotly_chart(fig, width="stretch")
+    fig.update_xaxes(gridcolor="#C9D2B6", zerolinecolor="#9AA882")
+    fig.update_layout(xaxis_title=f"{a}'s disadvantage vs {b}  (right = {a} behind)")
+    st.plotly_chart(style_fig(fig, 380), width="stretch")
 
     if a == "India" and b == "China":
         st.subheader("Ranked recommendations for India")
@@ -244,19 +299,23 @@ def section_clusters() -> None:
     plot["tier"] = clusters["tier"]
 
     fig = go.Figure()
-    for tier in sorted(plot["tier"].unique()):
+    for i, tier in enumerate(sorted(plot["tier"].unique())):
         m = plot["tier"] == tier
         fig.add_trace(go.Scatter(
             x=plot.loc[m, "PC1"], y=plot.loc[m, "PC2"], mode="markers",
-            name=tier, text=plot.index[m], marker=dict(size=9)))
-    for country, color in [(a, "#c0392b"), (b, "#2980b9")]:
+            name=tier, text=plot.index[m],
+            marker=dict(size=10, color=TIER_COLORS[i % len(TIER_COLORS)],
+                        line=dict(width=0.5, color="#FFFFFF"))))
+    for country, color in [(a, DARK_OLIVE), (b, CLAY)]:
         fig.add_trace(go.Scatter(
             x=[plot.loc[country, "PC1"]], y=[plot.loc[country, "PC2"]],
             mode="markers+text", text=[country], textposition="top center",
-            marker=dict(size=16, color=color, symbol="star"), showlegend=False))
-    fig.update_layout(height=560, margin=dict(t=20, b=20),
-                      xaxis_title="PC1", yaxis_title="PC2")
-    st.plotly_chart(fig, width="stretch")
+            marker=dict(size=18, color=color, symbol="star",
+                        line=dict(width=1, color="#FFFFFF")), showlegend=False))
+    fig.update_xaxes(gridcolor="#C9D2B6", zerolinecolor="#C9D2B6")
+    fig.update_yaxes(gridcolor="#C9D2B6", zerolinecolor="#C9D2B6")
+    fig.update_layout(xaxis_title="PC1", yaxis_title="PC2")
+    st.plotly_chart(style_fig(fig, 560), width="stretch")
 
     tier_a = clusters.loc[a, "tier"]
     peers = [c for c in clusters.index[clusters["tier"] == tier_a] if c != a]
