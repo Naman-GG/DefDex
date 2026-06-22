@@ -19,8 +19,8 @@ Design notes:
 - Win probability is computed LIVE from model/win_predictor.pkl (sklearn
   LogReg + MLP) so any A-vs-B pair works — and there is no xgboost/libomp
   runtime dependency, keeping Streamlit Cloud deploys simple.
-- The Gap section can render an optional AI strategic narrative via xAI Grok
-  (set XAI_API_KEY as an env var locally or a Streamlit secret on deploy);
+- The Gap section can render an optional AI strategic narrative via Groq
+  (set GROQ_API_KEY as an env var locally or a Streamlit secret on deploy);
   it falls back to a deterministic template narrative when unavailable.
 
 Run:
@@ -193,24 +193,24 @@ def load_win_model() -> dict:
     return joblib.load(MODEL_DIR / "win_predictor.pkl")
 
 
-# --- Optional AI narrative (xAI Grok, OpenAI-compatible REST) ---------------
-XAI_URL = os.environ.get("XAI_BASE_URL", "https://api.x.ai/v1").rstrip("/") + "/chat/completions"
+# --- Optional AI narrative (Groq, OpenAI-compatible REST) -------------------
+GROQ_URL = os.environ.get("GROQ_BASE_URL", "https://api.groq.com/openai/v1").rstrip("/") + "/chat/completions"
 
 
-def get_xai_key() -> str | None:
+def get_groq_key() -> str | None:
     """API key from Streamlit secrets (cloud deploy) or env var (local)."""
     try:
-        if "XAI_API_KEY" in st.secrets:
-            return st.secrets["XAI_API_KEY"]
+        if "GROQ_API_KEY" in st.secrets:
+            return st.secrets["GROQ_API_KEY"]
     except Exception:
         pass
-    return os.environ.get("XAI_API_KEY")
+    return os.environ.get("GROQ_API_KEY")
 
 
 @st.cache_data(show_spinner=False)
-def grok_narrative(model: str, facts: str) -> str | None:
-    """Grounded strategic narrative via Grok; None on any failure (-> template)."""
-    key = get_xai_key()
+def groq_narrative(model: str, facts: str) -> str | None:
+    """Grounded strategic narrative via Groq; None on any failure (-> template)."""
+    key = get_groq_key()
     if not key:
         return None
     payload = {
@@ -223,7 +223,7 @@ def grok_narrative(model: str, facts: str) -> str | None:
         ],
     }
     try:
-        r = requests.post(XAI_URL, json=payload,
+        r = requests.post(GROQ_URL, json=payload,
                           headers={"Authorization": f"Bearer {key}"}, timeout=45)
         if r.status_code == 200:
             return r.json()["choices"][0]["message"]["content"].strip() or None
@@ -286,11 +286,12 @@ if a == b:
 
 st.sidebar.markdown("---")
 ai_enabled = st.sidebar.toggle(
-    "AI narrative (Grok)", value=False,
-    help="Uses xAI Grok when XAI_API_KEY is set (env var locally, or Streamlit "
+    "AI narrative (Groq)", value=False,
+    help="Uses Groq when GROQ_API_KEY is set (env var locally, or Streamlit "
          "secret on deploy). Falls back to a template narrative otherwise.")
-ai_model = (st.sidebar.text_input("Grok model", value=os.environ.get("XAI_MODEL", "grok-3"))
-            if ai_enabled else "grok-3")
+ai_model = (st.sidebar.text_input("Groq model",
+                                  value=os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile"))
+            if ai_enabled else "llama-3.3-70b-versatile")
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Data: GFP · World Bank · UCDP · SIPRI")
@@ -442,7 +443,7 @@ def section_gap() -> None:
 
     recs = build_recommendations(a, b)
 
-    # --- Strategic narrative (Grok if enabled & available, else template) ----
+    # --- Strategic narrative (Groq if enabled & available, else template) ----
     st.subheader("Strategic narrative")
     wp = win_probability(load_win_model(), feats, a, b)["ensemble"]
     rank = int(feats["strength_score"].rank(ascending=False)[a])
@@ -457,16 +458,16 @@ def section_gap() -> None:
         f"Recommended priorities: " + "; ".join(r["recommendation"] for r in recs[:4]) + "."
     )
     narrative = None
-    if ai_enabled and get_xai_key():
-        with st.spinner("Generating narrative with Grok…"):
-            narrative = grok_narrative(ai_model, facts)
+    if ai_enabled and get_groq_key():
+        with st.spinner("Generating narrative with Groq…"):
+            narrative = groq_narrative(ai_model, facts)
         if narrative:
             st.markdown(narrative)
-            st.caption(f"AI-generated · xAI {ai_model}")
+            st.caption(f"AI-generated · Groq {ai_model}")
         else:
-            st.caption("Grok unavailable — showing template narrative.")
+            st.caption("Groq unavailable — showing template narrative.")
     elif ai_enabled:
-        st.caption("No XAI_API_KEY found — showing template narrative.")
+        st.caption("No GROQ_API_KEY found — showing template narrative.")
     if not narrative:
         st.markdown(template_narrative(a, b, recs))
 

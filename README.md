@@ -223,7 +223,7 @@ Interactive sections: **Overview**, **Capability Radar**, **Service Branches**
 any pair), **Gap & Recommendations**, and **Capability Clusters**. Defaults to
 India vs China; any two of the 50 countries can be compared.
 
-### Optional AI narrative (xAI Grok)
+### Optional AI narrative (Groq)
 
 The Gap section can render an LLM-written strategic narrative grounded in the
 computed gap data. It is **off by default** and falls back to a deterministic
@@ -231,21 +231,20 @@ template narrative whenever no key is set or the API is unreachable — so the
 app always works without it.
 
 ```bash
-export XAI_API_KEY=xai-...        # local
-export XAI_MODEL=grok-3           # optional, overrides the default
+export GROQ_API_KEY=gsk_...                 # local
+export GROQ_MODEL=llama-3.3-70b-versatile   # optional, overrides the default
 ```
 
-On **Streamlit Community Cloud**, add `XAI_API_KEY` under the app's *Secrets*
-(`.streamlit/secrets.toml`) — because Grok is a hosted API it works in the
-cloud deploy. (An earlier Ollama-based design was dropped since Ollama needs a
-local server that Cloud can't run.)
+On **Streamlit Community Cloud**, add `GROQ_API_KEY` under the app's *Secrets*
+(`.streamlit/secrets.toml`) — because Groq is a hosted API it works in the
+cloud deploy.
 
 ## Deployment
 
 The dashboard is Streamlit Cloud-ready: relative paths, cached loaders, and no
 xgboost/libomp runtime dependency (win-probability uses the sklearn model).
 Point the platform at `dashboard/app.py`, install `requirements.txt`, and
-optionally set `XAI_API_KEY` as a secret to enable the AI narrative.
+optionally set `GROQ_API_KEY` as a secret to enable the AI narrative.
 
 > **Note on the win-probability model:** It is a *capability-advantage* model — it
 > quantifies the measured force-balance gap as a calibrated probability. An earlier
