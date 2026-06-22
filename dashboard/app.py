@@ -241,8 +241,22 @@ def section_overview() -> None:
         "gap), not a forecast of actual war outcomes — historical outcomes are not "
         "predictable from capability alone."
     )
-    st.subheader("Capability profile")
-    st.plotly_chart(radar_fig(), width="stretch")
+
+    st.subheader("Global capability standing")
+    st.caption("Strength score across the field — the two selected countries are highlighted.")
+    ss = feats["strength_score"].sort_values(ascending=False)
+    keep = list(ss.head(12).index)
+    for c in (a, b):
+        if c not in keep:
+            keep.append(c)
+    sub = ss[keep].sort_values()  # ascending so the strongest sits at the top
+    colors = [CRIMSON if c == a else OLIVE_DRAB if c == b else SAGE for c in sub.index]
+    fig = go.Figure(go.Bar(
+        x=sub.values, y=sub.index, orientation="h", marker_color=colors,
+        text=[f"{v:.2f}" for v in sub.values], textposition="auto"))
+    fig.update_xaxes(range=[0, 1], gridcolor="#C9D2B6", zerolinecolor="#9AA882")
+    fig.update_layout(xaxis_title="Strength score (0–1)")
+    st.plotly_chart(style_fig(fig, 460), width="stretch")
 
 
 def radar_fig() -> go.Figure:
