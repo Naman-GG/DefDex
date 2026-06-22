@@ -571,11 +571,12 @@ def section_home() -> None:
         ("Gap & Recommendations", "Where one country trails, with ranked, data-grounded priorities."),
         ("Capability Clusters", "KMeans tiers showing each country's peer group."),
     ]
-    cols = st.columns(3)
-    for i, (title, desc) in enumerate(cards):
-        with cols[i % 3]:
-            st.markdown(f"**{title}**")
-            st.caption(desc)
+    for row_start in range(0, len(cards), 3):
+        cols = st.columns(3)
+        for col, (title, desc) in zip(cols, cards[row_start:row_start + 3]):
+            with col.container(border=True, height=150):
+                st.markdown(f"**{title}**")
+                st.caption(desc)
 
     st.divider()
     st.subheader("Top 15 by overall capability")
